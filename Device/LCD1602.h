@@ -24,7 +24,7 @@
 //#define LCD1602_Delay_us(us)	()
 
 //------------------LCD1602 Connection Mode------------------
-#define LCD1602_MODE_RW_STATE	((uint8_t)(1 << 1)) //< 0: Connect RW  		; 1: Not Connect RW
+#define LCD1602_MODE_RW_STATE	((uint8_t)(1 << 1)) //< 1: Connect RW  		; 0: Not Connect RW
 #define LCD1602_MODE_DATA_STATE	((uint8_t)(1 << 2)) //< 0: 8 Pin Connection  ; 1: 4 Pin Connection
 #define LCD1602_MODE_INIT_SET_1	((uint8_t)(1 << 3)) //< 0: the lcd1602 pin unset;
 													//< 1: the lcd1602 pin set
@@ -120,25 +120,79 @@ typedef struct{
 	uint8_t ConnectMode;
 	LCD1602_RW_e RWMode;
 
-	struct{
-		uint16_t cols;
-		uint16_t rows;
-	}Display_Size;
-
 	uint16_t Cursor_Pos;
 
 }LCD1602_t;
 
 
-
-extern LCD1602_ERROR_CODE_e LCD1602_Pins_Set(LCD1602_t* Dev, uint16_t cols, uint16_t rows,
+/**
+ * \brief     : This Function is used to set the RS and EN Pin connected to lcd1602
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : max_character: used to identity the device max length
+ * \param[in] : EN_GPIOx: GPIOx of the pin used to connected to LCD1602
+ * \param[in] : EN_GPIO_Pin: GPIOx of the pin used to connected to LCD1602
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
+extern LCD1602_ERROR_CODE_e LCD1602_Pins_Set(LCD1602_t* Dev,
 											 GPIO_TypeDef* EN_GPIOx, uint16_t EN_GPIO_Pin,
 											 GPIO_TypeDef* RS_GPIOx, uint16_t RS_GPIO_Pin);
+
+/*
+ * \brief     : This Function is used to set the RW Pin if the pin is connected to lcd1602
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : RW_GPIOx: GPIOx of the pin used to connected to LCD1602
+ * \param[in] : RW_GPIO_Pin: GPIOx of the pin used to connected to LCD1602
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_RW_Pin_Set(LCD1602_t* Dev, GPIO_TypeDef* RW_GPIOx, uint16_t RW_GPIO_Pin);
-extern LCD1602_ERROR_CODE_e LCD1602_4Pin_Set(LCD1602_t* Dev, GPIO_TypeDef* DB0_GPIOx, uint16_t DB0_GPIO_Pin
-														   , GPIO_TypeDef* DB1_GPIOx, uint16_t DB1_GPIO_Pin
-														   , GPIO_TypeDef* DB2_GPIOx, uint16_t DB2_GPIO_Pin
-														   , GPIO_TypeDef* DB3_GPIOx, uint16_t DB3_GPIO_Pin);
+
+/**
+ * \brief     : This Function is used to set a 4 pin connection lcd1602
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : DB?_GPIOx: GPIOx of the pin used to connected to LCD1602
+ * \param[in] : DB?_GPIO_Pin: GPIOx of the pin used to connected to LCD1602
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
+extern LCD1602_ERROR_CODE_e LCD1602_4Pin_Set(LCD1602_t* Dev, GPIO_TypeDef* DB4_GPIOx, uint16_t DB4_GPIO_Pin
+														   , GPIO_TypeDef* DB5_GPIOx, uint16_t DB5_GPIO_Pin
+														   , GPIO_TypeDef* DB6_GPIOx, uint16_t DB6_GPIO_Pin
+														   , GPIO_TypeDef* DB7_GPIOx, uint16_t DB7_GPIO_Pin);
+
+/**
+ * \brief     : This Function is used to set a 8 pin connection lcd1602
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : DB?_GPIOx: GPIOx of the pin used to connected to LCD1602
+ * \param[in] : DB?_GPIO_Pin: GPIOx of the pin used to connected to LCD1602
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_8Pin_Set(LCD1602_t* Dev, GPIO_TypeDef* DB0_GPIOx, uint16_t DB0_GPIO_Pin
 														   , GPIO_TypeDef* DB1_GPIOx, uint16_t DB1_GPIO_Pin
 														   , GPIO_TypeDef* DB2_GPIOx, uint16_t DB2_GPIO_Pin
@@ -147,10 +201,79 @@ extern LCD1602_ERROR_CODE_e LCD1602_8Pin_Set(LCD1602_t* Dev, GPIO_TypeDef* DB0_G
 														   , GPIO_TypeDef* DB5_GPIOx, uint16_t DB5_GPIO_Pin
 														   , GPIO_TypeDef* DB6_GPIOx, uint16_t DB6_GPIO_Pin
 														   , GPIO_TypeDef* DB7_GPIOx, uint16_t DB7_GPIO_Pin);
+
+/**
+ * \brief     : This Function is used to Init the device
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_Init(LCD1602_t* Dev);
+
+/**
+ * \brief     : This Function is used to provide the display data (same as printf)
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/15
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : format: the format of the input data
+ * \param[in] : ...: the input variable
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_Printf(LCD1602_t* Dev, const char *format,...);
+
+/*
+ * \brief     : This Function is used to set the cursor
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/17
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \param[in] : cols: the col of the target cursor; start at 0
+ * \param[in] : rows: the row of the target cursor; start at 0
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_SetCursor(LCD1602_t* Dev, uint16_t cols, uint16_t rows);
+
+/**
+ * \brief     : This Function is used to clear the display of LCD1602
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/17
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_Clear(LCD1602_t* Dev);
+
+/**
+ * \brief     : This Function is used to set the cursor to home
+ *
+ * \copyright : Copyright Jiarun LIU
+ * \date      : 2022/10/17
+ * \author    : Jiarun LIU
+ *
+ * \param[in] : Dev: the address of the device structure
+ * \return    : used to detect the error @LCD1602_ERROR_CODE_e
+ *
+ * \include   : <stm32??xx_hal_gpio.h>	?? is based on the core type(for stm32l4xx: <stm32l4xx_hal_gpio.h>)
+ */
 extern LCD1602_ERROR_CODE_e LCD1602_Cursor_Home(LCD1602_t* Dev);
 
 #endif /* LCD1602_H_ */

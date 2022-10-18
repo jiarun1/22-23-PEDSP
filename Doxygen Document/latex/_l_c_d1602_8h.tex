@@ -1,0 +1,677 @@
+\hypertarget{_l_c_d1602_8h}{}\doxysection{C\+:/\+Users/ljr05/\+One\+Drive -\/ The University of Nottingham/\+Desktop/\+University/\+Year 3/\+Y3 Semestar1/\+PEDSP (EEE2046)/\+Electronics Project/\+Codes/\+LCD1602\+\_\+\+Test\+\_\+\+Code/\+Device/\+LCD1602.h File Reference}
+\label{_l_c_d1602_8h}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.h@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a78d94be4b2b44ae284358e13d2d840ca}{LCD1602\+\_\+\+MAX\+\_\+\+WRITTER\+\_\+\+BUFFER\+\_\+\+SIZE}}~256
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_aea3426c6a6dd9b6aa15f6ffc78e90778}{LCD1602\+\_\+\+Delay\+\_\+ms}}(ms)~(HAL\+\_\+\+Delay(ms))
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a7d80111459e0d9b23fd2095d4e800e7e}{LCD1602\+\_\+\+MODE\+\_\+\+RW\+\_\+\+STATE}}~((uint8\+\_\+t)(1 $<$$<$ 1))
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a2ab223b7e99315a3050ee265ae5adf79}{LCD1602\+\_\+\+MODE\+\_\+\+DATA\+\_\+\+STATE}}~((uint8\+\_\+t)(1 $<$$<$ 2))
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a56c0033b6e27005b426baed9afd0f5b7}{LCD1602\+\_\+\+MODE\+\_\+\+INIT\+\_\+\+SET\+\_\+1}}~((uint8\+\_\+t)(1 $<$$<$ 3))
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_aa12c633bc089dc611d283085421d1227}{LCD1602\+\_\+\+MODE\+\_\+\+INIT\+\_\+\+SET\+\_\+2}}~((uint8\+\_\+t)(1 $<$$<$ 4))
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a512c5143dc43601e13185870bb0d5722}{LCD1602\+\_\+\+WRITE\+\_\+\+MODE}}~0
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a8772697149e07a7b7aea7d828a9a553d}{LCD1602\+\_\+\+READ\+\_\+\+MODE}}~1
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_afc266607df496e72492b88d811ce7b2d}{LCD1602\+\_\+\+COMMAND\+\_\+\+MODE}}~0
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a7d7fed09441081829c520454d5c1bddf}{LCD1602\+\_\+\+DATA\+\_\+\+MODE}}~1
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_aa47ce8e5ef3c31636a9358a7269fc57c}{LCD1602\+\_\+\+COMMAND\+\_\+\+CLEAR}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_ae2e5ea00719e56e5567ee189d21a90fb}{LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+HOME}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a19111b48699cc6133974ac78966233fb}{LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_af8255ff3ab0db3c330fab07f1e82f2df}{LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE\+\_\+\+CURSOR\+\_\+\+DIR}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a9478f5ca3f298f0404904b4e90cfe67f}{LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE\+\_\+\+SHIFT}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a01bdf0cb909a93918df3bee8e1df2c56}{LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+MODE}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_aee0207823ba959d810b8c30f92158bb2}{LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+ON\+\_\+\+OFF}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a3af151f079f58c8caeb5f0cae328832e}{LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+CURSOR}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a45a14656c647f1ebc4e2b5143a549b7c}{LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+BLINK}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_ae2d94fcf12e05ca8f2df76d635b47105}{LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+DISPLAY\+\_\+\+MODE}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_ad4287f75dbb17b334ff6992f0a50418d}{LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+SHIFT\+\_\+\+ON}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_af473856599c8e38854ad1b4ed1612762}{LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+SHIFT\+\_\+\+DIR}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a57f6f8447aa2d80eb38052a7e5f34878}{LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+SET}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a761b7cfecd69ad5c391a6b65c0f119c8}{LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+DATA\+\_\+\+LENGTH}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_af6741b1d3fd858b8a5fdca081306b10a}{LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+LINE\+\_\+\+NUMBER}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a6bb08aa341c70cccf25e545b2837aa5f}{LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+FONT}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a9fbd626aa1c94b74bb5c474b9d0fde02}{LCD1602\+\_\+\+COMMAND\+\_\+\+CGRAM\+\_\+\+ADDR\+\_\+\+SET}}~((uint8\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a67bec9ec1154f5ddc7769b3da9489eae}{LCD1602\+\_\+\+COMMAND\+\_\+\+DDRAM\+\_\+\+ADDR\+\_\+\+SET}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{_l_c_d1602_8h_a61acf2d92a76356fe2b427d0d2ec601d}{LCD1602\+\_\+\+COMMAND\+\_\+\+READBUSY\+\_\+\+ADDR\+\_\+\+COUNTER}}~((uint8\+\_\+t)0x80)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729b}{LCD1602\+\_\+\+Pin\+\_\+\+Name\+\_\+e}} \{ \newline
+\mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729babfbf9f4a29e124711d41520221c7c223}{LCD1602\+\_\+\+RS\+\_\+\+PIN}} = 0
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3ff61ea184a4f4f5985dd9474ee4f743}{LCD1602\+\_\+\+RW\+\_\+\+PIN}} = 1
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba5586f86d04aff24d683bafc63f8f242b}{LCD1602\+\_\+\+EN\+\_\+\+PIN}} = 2
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba19609757d6540d914a646bcc64e28000}{LCD1602\+\_\+\+DB0\+\_\+\+PIN}} = 3
+, \newline
+\mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba6dc04333e74c181a0c67a9f24d846555}{LCD1602\+\_\+\+DB1\+\_\+\+PIN}} = 4
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba32b27217d4443a5dbef608d807b795f4}{LCD1602\+\_\+\+DB2\+\_\+\+PIN}} = 5
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba7e4dd423f9e4a45a18d9b65914903288}{LCD1602\+\_\+\+DB3\+\_\+\+PIN}} = 6
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba1920bf8e9bd06682106e7c8d573b2470}{LCD1602\+\_\+\+DB4\+\_\+\+PIN}} = 7
+, \newline
+\mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba242400a81972e933abf0469c63659140}{LCD1602\+\_\+\+DB5\+\_\+\+PIN}} = 8
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729bab427109c14384662991d761e2e4ef496}{LCD1602\+\_\+\+DB6\+\_\+\+PIN}} = 9
+, \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3a854042e8509e935c2f4144e16fcf61}{LCD1602\+\_\+\+DB7\+\_\+\+PIN}} = 10
+ \}
+\item 
+enum \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \{ \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ad97b0238b4c45fc170dda7bc643bbc30}{LCD1602\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ace6167f4591493ea13b8b63f7ed59581}{LCD1602\+\_\+\+INIT\+\_\+\+PIN\+\_\+\+UNSET}} = 1
+, \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a7036590dccadc8534995cd35ee3db377}{LCD1602\+\_\+\+NO\+\_\+\+READ\+\_\+\+PIN}} = 2
+, \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a155beb841b60ac68fcd1a516993a1348}{LCD1602\+\_\+\+NO\+\_\+\+READ\+\_\+\+ADDR}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}{LCD1602\+\_\+\+RW\+\_\+e}} \{ \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbca30f8107d82030033707f7878ef01e384}{LCD1602\+\_\+\+WRITE}} = LCD1602\+\_\+\+WRITE\+\_\+\+MODE
+, \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbcac00e34a05dc3865c1977f8ff247b1dec}{LCD1602\+\_\+\+READ}} = LCD1602\+\_\+\+READ\+\_\+\+MODE
+ \}
+\item 
+enum \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}} \{ \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a063f515fb5b1042581d3b6a7d0287614}{LCD1602\+\_\+\+COMMAND}} = LCD1602\+\_\+\+COMMAND\+\_\+\+MODE
+, \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a8948443789c4aa60e07b3a959ae4beed}{LCD1602\+\_\+\+DATA}} = LCD1602\+\_\+\+DATA\+\_\+\+MODE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a0ba02461a3e073bdb6d63103a635bf22}{LCD1602\+\_\+\+Pins\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$EN\+\_\+\+GPIOx, uint16\+\_\+t EN\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$RS\+\_\+\+GPIOx, uint16\+\_\+t RS\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the RS and EN Pin connected to lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a30b901663d290c7afbdfec063de23a29}{LCD1602\+\_\+\+RW\+\_\+\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$RW\+\_\+\+GPIOx, uint16\+\_\+t RW\+\_\+\+GPIO\+\_\+\+Pin)
+\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_ac0d791e16cb2839b9ff818be3d444d13}{LCD1602\+\_\+4\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$DB4\+\_\+\+GPIOx, uint16\+\_\+t DB4\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB5\+\_\+\+GPIOx, uint16\+\_\+t DB5\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB6\+\_\+\+GPIOx, uint16\+\_\+t DB6\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB7\+\_\+\+GPIOx, uint16\+\_\+t DB7\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set a 4 pin connection lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a5eeef58c003f86f9ad3d08b657c8ac1b}{LCD1602\+\_\+8\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$DB0\+\_\+\+GPIOx, uint16\+\_\+t DB0\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB1\+\_\+\+GPIOx, uint16\+\_\+t DB1\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB2\+\_\+\+GPIOx, uint16\+\_\+t DB2\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB3\+\_\+\+GPIOx, uint16\+\_\+t DB3\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB4\+\_\+\+GPIOx, uint16\+\_\+t DB4\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB5\+\_\+\+GPIOx, uint16\+\_\+t DB5\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB6\+\_\+\+GPIOx, uint16\+\_\+t DB6\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB7\+\_\+\+GPIOx, uint16\+\_\+t DB7\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set a 8 pin connection lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a49f35110ca3b969811675a5c716425cc}{LCD1602\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to Init the device \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a8af40ee2246ccdb70bf786bcfb9fa00c}{LCD1602\+\_\+\+Printf}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to provide the display data (same as printf) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a543c16cf8ef88348661cb03c5b461c23}{LCD1602\+\_\+\+Set\+Cursor}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, uint16\+\_\+t cols, uint16\+\_\+t rows)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the cursor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a1eb1444e13bb13e773b1b773d2710053}{LCD1602\+\_\+\+Clear}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to clear the display of LCD1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8h_a0879c1a10bc1d5614b11f9091cc05cef}{LCD1602\+\_\+\+Cursor\+\_\+\+Home}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the cursor to home \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_l_c_d1602_8h_a9fbd626aa1c94b74bb5c474b9d0fde02}\label{_l_c_d1602_8h_a9fbd626aa1c94b74bb5c474b9d0fde02}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CGRAM\_ADDR\_SET@{LCD1602\_COMMAND\_CGRAM\_ADDR\_SET}}
+\index{LCD1602\_COMMAND\_CGRAM\_ADDR\_SET@{LCD1602\_COMMAND\_CGRAM\_ADDR\_SET}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CGRAM\_ADDR\_SET}{LCD1602\_COMMAND\_CGRAM\_ADDR\_SET}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CGRAM\+\_\+\+ADDR\+\_\+\+SET~((uint8\+\_\+t)0x40)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_aa47ce8e5ef3c31636a9358a7269fc57c}\label{_l_c_d1602_8h_aa47ce8e5ef3c31636a9358a7269fc57c}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CLEAR@{LCD1602\_COMMAND\_CLEAR}}
+\index{LCD1602\_COMMAND\_CLEAR@{LCD1602\_COMMAND\_CLEAR}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CLEAR}{LCD1602\_COMMAND\_CLEAR}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CLEAR~((uint8\+\_\+t)0x01)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_ae2d94fcf12e05ca8f2df76d635b47105}\label{_l_c_d1602_8h_ae2d94fcf12e05ca8f2df76d635b47105}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE@{LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE}}
+\index{LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE@{LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE}{LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+DISPLAY\+\_\+\+MODE~((uint8\+\_\+t)0x10)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_ae2e5ea00719e56e5567ee189d21a90fb}\label{_l_c_d1602_8h_ae2e5ea00719e56e5567ee189d21a90fb}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CURSOR\_HOME@{LCD1602\_COMMAND\_CURSOR\_HOME}}
+\index{LCD1602\_COMMAND\_CURSOR\_HOME@{LCD1602\_COMMAND\_CURSOR\_HOME}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CURSOR\_HOME}{LCD1602\_COMMAND\_CURSOR\_HOME}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+HOME~((uint8\+\_\+t)0x02)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_af473856599c8e38854ad1b4ed1612762}\label{_l_c_d1602_8h_af473856599c8e38854ad1b4ed1612762}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR@{LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR}}
+\index{LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR@{LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR}{LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+SHIFT\+\_\+\+DIR~((uint8\+\_\+t)0x04)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_ad4287f75dbb17b334ff6992f0a50418d}\label{_l_c_d1602_8h_ad4287f75dbb17b334ff6992f0a50418d}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON@{LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON}}
+\index{LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON@{LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON}{LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+CURSOR\+\_\+\+SHIFT\+\_\+\+ON~((uint8\+\_\+t)0x08)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a67bec9ec1154f5ddc7769b3da9489eae}\label{_l_c_d1602_8h_a67bec9ec1154f5ddc7769b3da9489eae}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_DDRAM\_ADDR\_SET@{LCD1602\_COMMAND\_DDRAM\_ADDR\_SET}}
+\index{LCD1602\_COMMAND\_DDRAM\_ADDR\_SET@{LCD1602\_COMMAND\_DDRAM\_ADDR\_SET}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_DDRAM\_ADDR\_SET}{LCD1602\_COMMAND\_DDRAM\_ADDR\_SET}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+DDRAM\+\_\+\+ADDR\+\_\+\+SET~((uint8\+\_\+t)0x80)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a3af151f079f58c8caeb5f0cae328832e}\label{_l_c_d1602_8h_a3af151f079f58c8caeb5f0cae328832e}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_DISPLAY\_CURSOR@{LCD1602\_COMMAND\_DISPLAY\_CURSOR}}
+\index{LCD1602\_COMMAND\_DISPLAY\_CURSOR@{LCD1602\_COMMAND\_DISPLAY\_CURSOR}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_DISPLAY\_CURSOR}{LCD1602\_COMMAND\_DISPLAY\_CURSOR}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+CURSOR~((uint8\+\_\+t)0x02)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a45a14656c647f1ebc4e2b5143a549b7c}\label{_l_c_d1602_8h_a45a14656c647f1ebc4e2b5143a549b7c}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK@{LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK}}
+\index{LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK@{LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK}{LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+CURSOR\+\_\+\+BLINK~((uint8\+\_\+t)0x01)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a01bdf0cb909a93918df3bee8e1df2c56}\label{_l_c_d1602_8h_a01bdf0cb909a93918df3bee8e1df2c56}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_DISPLAY\_MODE@{LCD1602\_COMMAND\_DISPLAY\_MODE}}
+\index{LCD1602\_COMMAND\_DISPLAY\_MODE@{LCD1602\_COMMAND\_DISPLAY\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_DISPLAY\_MODE}{LCD1602\_COMMAND\_DISPLAY\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+MODE~((uint8\+\_\+t)0x08)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_aee0207823ba959d810b8c30f92158bb2}\label{_l_c_d1602_8h_aee0207823ba959d810b8c30f92158bb2}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_DISPLAY\_ON\_OFF@{LCD1602\_COMMAND\_DISPLAY\_ON\_OFF}}
+\index{LCD1602\_COMMAND\_DISPLAY\_ON\_OFF@{LCD1602\_COMMAND\_DISPLAY\_ON\_OFF}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_DISPLAY\_ON\_OFF}{LCD1602\_COMMAND\_DISPLAY\_ON\_OFF}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+DISPLAY\+\_\+\+ON\+\_\+\+OFF~((uint8\+\_\+t)0x04)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a19111b48699cc6133974ac78966233fb}\label{_l_c_d1602_8h_a19111b48699cc6133974ac78966233fb}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_ENTRY\_MODE@{LCD1602\_COMMAND\_ENTRY\_MODE}}
+\index{LCD1602\_COMMAND\_ENTRY\_MODE@{LCD1602\_COMMAND\_ENTRY\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_ENTRY\_MODE}{LCD1602\_COMMAND\_ENTRY\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE~((uint8\+\_\+t)0x04)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_af8255ff3ab0db3c330fab07f1e82f2df}\label{_l_c_d1602_8h_af8255ff3ab0db3c330fab07f1e82f2df}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR@{LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR}}
+\index{LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR@{LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR}{LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE\+\_\+\+CURSOR\+\_\+\+DIR~((uint8\+\_\+t)0x02)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a9478f5ca3f298f0404904b4e90cfe67f}\label{_l_c_d1602_8h_a9478f5ca3f298f0404904b4e90cfe67f}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT@{LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT}}
+\index{LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT@{LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT}{LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+ENTRY\+\_\+\+MODE\+\_\+\+SHIFT~((uint8\+\_\+t)0x01)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a761b7cfecd69ad5c391a6b65c0f119c8}\label{_l_c_d1602_8h_a761b7cfecd69ad5c391a6b65c0f119c8}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH@{LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH}}
+\index{LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH@{LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH}{LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+DATA\+\_\+\+LENGTH~((uint8\+\_\+t)0x10)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a6bb08aa341c70cccf25e545b2837aa5f}\label{_l_c_d1602_8h_a6bb08aa341c70cccf25e545b2837aa5f}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_FUNCTION\_FONT@{LCD1602\_COMMAND\_FUNCTION\_FONT}}
+\index{LCD1602\_COMMAND\_FUNCTION\_FONT@{LCD1602\_COMMAND\_FUNCTION\_FONT}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_FUNCTION\_FONT}{LCD1602\_COMMAND\_FUNCTION\_FONT}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+FONT~((uint8\+\_\+t)0x04)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_af6741b1d3fd858b8a5fdca081306b10a}\label{_l_c_d1602_8h_af6741b1d3fd858b8a5fdca081306b10a}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER@{LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER}}
+\index{LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER@{LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER}{LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+LINE\+\_\+\+NUMBER~((uint8\+\_\+t)0x08)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a57f6f8447aa2d80eb38052a7e5f34878}\label{_l_c_d1602_8h_a57f6f8447aa2d80eb38052a7e5f34878}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_FUNCTION\_SET@{LCD1602\_COMMAND\_FUNCTION\_SET}}
+\index{LCD1602\_COMMAND\_FUNCTION\_SET@{LCD1602\_COMMAND\_FUNCTION\_SET}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_FUNCTION\_SET}{LCD1602\_COMMAND\_FUNCTION\_SET}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+FUNCTION\+\_\+\+SET~((uint8\+\_\+t)0x20)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_afc266607df496e72492b88d811ce7b2d}\label{_l_c_d1602_8h_afc266607df496e72492b88d811ce7b2d}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_MODE@{LCD1602\_COMMAND\_MODE}}
+\index{LCD1602\_COMMAND\_MODE@{LCD1602\_COMMAND\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_MODE}{LCD1602\_COMMAND\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+MODE~0}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a61acf2d92a76356fe2b427d0d2ec601d}\label{_l_c_d1602_8h_a61acf2d92a76356fe2b427d0d2ec601d}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER@{LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER}}
+\index{LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER@{LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER}{LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+COMMAND\+\_\+\+READBUSY\+\_\+\+ADDR\+\_\+\+COUNTER~((uint8\+\_\+t)0x80)}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a7d7fed09441081829c520454d5c1bddf}\label{_l_c_d1602_8h_a7d7fed09441081829c520454d5c1bddf}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_DATA\_MODE@{LCD1602\_DATA\_MODE}}
+\index{LCD1602\_DATA\_MODE@{LCD1602\_DATA\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_DATA\_MODE}{LCD1602\_DATA\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+DATA\+\_\+\+MODE~1}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_aea3426c6a6dd9b6aa15f6ffc78e90778}\label{_l_c_d1602_8h_aea3426c6a6dd9b6aa15f6ffc78e90778}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Delay\_ms@{LCD1602\_Delay\_ms}}
+\index{LCD1602\_Delay\_ms@{LCD1602\_Delay\_ms}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Delay\_ms}{LCD1602\_Delay\_ms}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+Delay\+\_\+ms(\begin{DoxyParamCaption}\item[{}]{ms }\end{DoxyParamCaption})~(HAL\+\_\+\+Delay(ms))}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a78d94be4b2b44ae284358e13d2d840ca}\label{_l_c_d1602_8h_a78d94be4b2b44ae284358e13d2d840ca}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE@{LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE}}
+\index{LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE@{LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE}{LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+MAX\+\_\+\+WRITTER\+\_\+\+BUFFER\+\_\+\+SIZE~256}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a2ab223b7e99315a3050ee265ae5adf79}\label{_l_c_d1602_8h_a2ab223b7e99315a3050ee265ae5adf79}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_MODE\_DATA\_STATE@{LCD1602\_MODE\_DATA\_STATE}}
+\index{LCD1602\_MODE\_DATA\_STATE@{LCD1602\_MODE\_DATA\_STATE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_MODE\_DATA\_STATE}{LCD1602\_MODE\_DATA\_STATE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+MODE\+\_\+\+DATA\+\_\+\+STATE~((uint8\+\_\+t)(1 $<$$<$ 2))}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a56c0033b6e27005b426baed9afd0f5b7}\label{_l_c_d1602_8h_a56c0033b6e27005b426baed9afd0f5b7}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_MODE\_INIT\_SET\_1@{LCD1602\_MODE\_INIT\_SET\_1}}
+\index{LCD1602\_MODE\_INIT\_SET\_1@{LCD1602\_MODE\_INIT\_SET\_1}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_MODE\_INIT\_SET\_1}{LCD1602\_MODE\_INIT\_SET\_1}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+MODE\+\_\+\+INIT\+\_\+\+SET\+\_\+1~((uint8\+\_\+t)(1 $<$$<$ 3))}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_aa12c633bc089dc611d283085421d1227}\label{_l_c_d1602_8h_aa12c633bc089dc611d283085421d1227}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_MODE\_INIT\_SET\_2@{LCD1602\_MODE\_INIT\_SET\_2}}
+\index{LCD1602\_MODE\_INIT\_SET\_2@{LCD1602\_MODE\_INIT\_SET\_2}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_MODE\_INIT\_SET\_2}{LCD1602\_MODE\_INIT\_SET\_2}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+MODE\+\_\+\+INIT\+\_\+\+SET\+\_\+2~((uint8\+\_\+t)(1 $<$$<$ 4))}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a7d80111459e0d9b23fd2095d4e800e7e}\label{_l_c_d1602_8h_a7d80111459e0d9b23fd2095d4e800e7e}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_MODE\_RW\_STATE@{LCD1602\_MODE\_RW\_STATE}}
+\index{LCD1602\_MODE\_RW\_STATE@{LCD1602\_MODE\_RW\_STATE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_MODE\_RW\_STATE}{LCD1602\_MODE\_RW\_STATE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+MODE\+\_\+\+RW\+\_\+\+STATE~((uint8\+\_\+t)(1 $<$$<$ 1))}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a8772697149e07a7b7aea7d828a9a553d}\label{_l_c_d1602_8h_a8772697149e07a7b7aea7d828a9a553d}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_READ\_MODE@{LCD1602\_READ\_MODE}}
+\index{LCD1602\_READ\_MODE@{LCD1602\_READ\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_READ\_MODE}{LCD1602\_READ\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+READ\+\_\+\+MODE~1}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a512c5143dc43601e13185870bb0d5722}\label{_l_c_d1602_8h_a512c5143dc43601e13185870bb0d5722}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_WRITE\_MODE@{LCD1602\_WRITE\_MODE}}
+\index{LCD1602\_WRITE\_MODE@{LCD1602\_WRITE\_MODE}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_WRITE\_MODE}{LCD1602\_WRITE\_MODE}}
+{\footnotesize\ttfamily \#define LCD1602\+\_\+\+WRITE\+\_\+\+MODE~0}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}\label{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_CMD\_DATA\_e@{LCD1602\_CMD\_DATA\_e}}
+\index{LCD1602\_CMD\_DATA\_e@{LCD1602\_CMD\_DATA\_e}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_CMD\_DATA\_e}{LCD1602\_CMD\_DATA\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_COMMAND@{LCD1602\_COMMAND}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_COMMAND@{LCD1602\_COMMAND}}}\mbox{\Hypertarget{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a063f515fb5b1042581d3b6a7d0287614}\label{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a063f515fb5b1042581d3b6a7d0287614}} 
+LCD1602\+\_\+\+COMMAND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DATA@{LCD1602\_DATA}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DATA@{LCD1602\_DATA}}}\mbox{\Hypertarget{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a8948443789c4aa60e07b3a959ae4beed}\label{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a8948443789c4aa60e07b3a959ae4beed}} 
+LCD1602\+\_\+\+DATA&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}\label{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_ERROR\_CODE\_e@{LCD1602\_ERROR\_CODE\_e}}
+\index{LCD1602\_ERROR\_CODE\_e@{LCD1602\_ERROR\_CODE\_e}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_ERROR\_CODE\_e}{LCD1602\_ERROR\_CODE\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_OK@{LCD1602\_OK}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_OK@{LCD1602\_OK}}}\mbox{\Hypertarget{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ad97b0238b4c45fc170dda7bc643bbc30}\label{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ad97b0238b4c45fc170dda7bc643bbc30}} 
+LCD1602\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_INIT\_PIN\_UNSET@{LCD1602\_INIT\_PIN\_UNSET}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_INIT\_PIN\_UNSET@{LCD1602\_INIT\_PIN\_UNSET}}}\mbox{\Hypertarget{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ace6167f4591493ea13b8b63f7ed59581}\label{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ace6167f4591493ea13b8b63f7ed59581}} 
+LCD1602\+\_\+\+INIT\+\_\+\+PIN\+\_\+\+UNSET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_NO\_READ\_PIN@{LCD1602\_NO\_READ\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_NO\_READ\_PIN@{LCD1602\_NO\_READ\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a7036590dccadc8534995cd35ee3db377}\label{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a7036590dccadc8534995cd35ee3db377}} 
+LCD1602\+\_\+\+NO\+\_\+\+READ\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_NO\_READ\_ADDR@{LCD1602\_NO\_READ\_ADDR}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_NO\_READ\_ADDR@{LCD1602\_NO\_READ\_ADDR}}}\mbox{\Hypertarget{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a155beb841b60ac68fcd1a516993a1348}\label{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a155beb841b60ac68fcd1a516993a1348}} 
+LCD1602\+\_\+\+NO\+\_\+\+READ\+\_\+\+ADDR&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729b}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729b}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Pin\_Name\_e@{LCD1602\_Pin\_Name\_e}}
+\index{LCD1602\_Pin\_Name\_e@{LCD1602\_Pin\_Name\_e}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Pin\_Name\_e}{LCD1602\_Pin\_Name\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729b}{LCD1602\+\_\+\+Pin\+\_\+\+Name\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_RS\_PIN@{LCD1602\_RS\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_RS\_PIN@{LCD1602\_RS\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729babfbf9f4a29e124711d41520221c7c223}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729babfbf9f4a29e124711d41520221c7c223}} 
+LCD1602\+\_\+\+RS\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_RW\_PIN@{LCD1602\_RW\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_RW\_PIN@{LCD1602\_RW\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3ff61ea184a4f4f5985dd9474ee4f743}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3ff61ea184a4f4f5985dd9474ee4f743}} 
+LCD1602\+\_\+\+RW\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_EN\_PIN@{LCD1602\_EN\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_EN\_PIN@{LCD1602\_EN\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba5586f86d04aff24d683bafc63f8f242b}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba5586f86d04aff24d683bafc63f8f242b}} 
+LCD1602\+\_\+\+EN\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB0\_PIN@{LCD1602\_DB0\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB0\_PIN@{LCD1602\_DB0\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba19609757d6540d914a646bcc64e28000}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba19609757d6540d914a646bcc64e28000}} 
+LCD1602\+\_\+\+DB0\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB1\_PIN@{LCD1602\_DB1\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB1\_PIN@{LCD1602\_DB1\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba6dc04333e74c181a0c67a9f24d846555}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba6dc04333e74c181a0c67a9f24d846555}} 
+LCD1602\+\_\+\+DB1\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB2\_PIN@{LCD1602\_DB2\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB2\_PIN@{LCD1602\_DB2\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba32b27217d4443a5dbef608d807b795f4}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba32b27217d4443a5dbef608d807b795f4}} 
+LCD1602\+\_\+\+DB2\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB3\_PIN@{LCD1602\_DB3\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB3\_PIN@{LCD1602\_DB3\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba7e4dd423f9e4a45a18d9b65914903288}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba7e4dd423f9e4a45a18d9b65914903288}} 
+LCD1602\+\_\+\+DB3\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB4\_PIN@{LCD1602\_DB4\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB4\_PIN@{LCD1602\_DB4\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba1920bf8e9bd06682106e7c8d573b2470}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba1920bf8e9bd06682106e7c8d573b2470}} 
+LCD1602\+\_\+\+DB4\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB5\_PIN@{LCD1602\_DB5\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB5\_PIN@{LCD1602\_DB5\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba242400a81972e933abf0469c63659140}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba242400a81972e933abf0469c63659140}} 
+LCD1602\+\_\+\+DB5\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB6\_PIN@{LCD1602\_DB6\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB6\_PIN@{LCD1602\_DB6\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729bab427109c14384662991d761e2e4ef496}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729bab427109c14384662991d761e2e4ef496}} 
+LCD1602\+\_\+\+DB6\+\_\+\+PIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_DB7\_PIN@{LCD1602\_DB7\_PIN}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_DB7\_PIN@{LCD1602\_DB7\_PIN}}}\mbox{\Hypertarget{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3a854042e8509e935c2f4144e16fcf61}\label{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3a854042e8509e935c2f4144e16fcf61}} 
+LCD1602\+\_\+\+DB7\+\_\+\+PIN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}\label{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_RW\_e@{LCD1602\_RW\_e}}
+\index{LCD1602\_RW\_e@{LCD1602\_RW\_e}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_RW\_e}{LCD1602\_RW\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}{LCD1602\+\_\+\+RW\+\_\+e}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_WRITE@{LCD1602\_WRITE}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_WRITE@{LCD1602\_WRITE}}}\mbox{\Hypertarget{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbca30f8107d82030033707f7878ef01e384}\label{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbca30f8107d82030033707f7878ef01e384}} 
+LCD1602\+\_\+\+WRITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LCD1602\_READ@{LCD1602\_READ}!LCD1602.h@{LCD1602.h}}\index{LCD1602.h@{LCD1602.h}!LCD1602\_READ@{LCD1602\_READ}}}\mbox{\Hypertarget{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbcac00e34a05dc3865c1977f8ff247b1dec}\label{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbcac00e34a05dc3865c1977f8ff247b1dec}} 
+LCD1602\+\_\+\+READ&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_l_c_d1602_8h_ac0d791e16cb2839b9ff818be3d444d13}\label{_l_c_d1602_8h_ac0d791e16cb2839b9ff818be3d444d13}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_4Pin\_Set@{LCD1602\_4Pin\_Set}}
+\index{LCD1602\_4Pin\_Set@{LCD1602\_4Pin\_Set}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_4Pin\_Set()}{LCD1602\_4Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+4\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB4\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB4\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB5\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB5\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB6\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB6\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB7\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB7\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set a 4 pin connection lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a5eeef58c003f86f9ad3d08b657c8ac1b}\label{_l_c_d1602_8h_a5eeef58c003f86f9ad3d08b657c8ac1b}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_8Pin\_Set@{LCD1602\_8Pin\_Set}}
+\index{LCD1602\_8Pin\_Set@{LCD1602\_8Pin\_Set}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_8Pin\_Set()}{LCD1602\_8Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+8\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB0\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB0\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB1\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB1\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB2\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB2\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB3\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB3\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB4\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB4\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB5\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB5\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB6\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB6\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB7\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB7\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set a 8 pin connection lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a1eb1444e13bb13e773b1b773d2710053}\label{_l_c_d1602_8h_a1eb1444e13bb13e773b1b773d2710053}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Clear@{LCD1602\_Clear}}
+\index{LCD1602\_Clear@{LCD1602\_Clear}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Clear()}{LCD1602\_Clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to clear the display of LCD1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a0879c1a10bc1d5614b11f9091cc05cef}\label{_l_c_d1602_8h_a0879c1a10bc1d5614b11f9091cc05cef}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Cursor\_Home@{LCD1602\_Cursor\_Home}}
+\index{LCD1602\_Cursor\_Home@{LCD1602\_Cursor\_Home}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Cursor\_Home()}{LCD1602\_Cursor\_Home()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Cursor\+\_\+\+Home (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the cursor to home 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>})
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a49f35110ca3b969811675a5c716425cc}\label{_l_c_d1602_8h_a49f35110ca3b969811675a5c716425cc}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Init@{LCD1602\_Init}}
+\index{LCD1602\_Init@{LCD1602\_Init}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Init()}{LCD1602\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to Init the device 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a0ba02461a3e073bdb6d63103a635bf22}\label{_l_c_d1602_8h_a0ba02461a3e073bdb6d63103a635bf22}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Pins\_Set@{LCD1602\_Pins\_Set}}
+\index{LCD1602\_Pins\_Set@{LCD1602\_Pins\_Set}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Pins\_Set()}{LCD1602\_Pins\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Pins\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{EN\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{EN\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{RS\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{RS\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the RS and EN Pin connected to lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & max\+\_\+character\+: used to identity the device max length \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & EN\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & EN\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a8af40ee2246ccdb70bf786bcfb9fa00c}\label{_l_c_d1602_8h_a8af40ee2246ccdb70bf786bcfb9fa00c}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_Printf@{LCD1602\_Printf}}
+\index{LCD1602\_Printf@{LCD1602\_Printf}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Printf()}{LCD1602\_Printf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Printf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to provide the display data (same as printf) 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & format\+: the format of the input data \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & ...\+: the input variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8h_a30b901663d290c7afbdfec063de23a29}\label{_l_c_d1602_8h_a30b901663d290c7afbdfec063de23a29}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_RW\_Pin\_Set@{LCD1602\_RW\_Pin\_Set}}
+\index{LCD1602\_RW\_Pin\_Set@{LCD1602\_RW\_Pin\_Set}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_RW\_Pin\_Set()}{LCD1602\_RW\_Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+RW\+\_\+\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{RW\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{RW\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d1602_8h_a543c16cf8ef88348661cb03c5b461c23}\label{_l_c_d1602_8h_a543c16cf8ef88348661cb03c5b461c23}} 
+\index{LCD1602.h@{LCD1602.h}!LCD1602\_SetCursor@{LCD1602\_SetCursor}}
+\index{LCD1602\_SetCursor@{LCD1602\_SetCursor}!LCD1602.h@{LCD1602.h}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_SetCursor()}{LCD1602\_SetCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{uint16\+\_\+t}]{cols,  }\item[{uint16\+\_\+t}]{rows }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the cursor 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & cols\+: the col of the target cursor; start at 0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & rows\+: the row of the target cursor; start at 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) 

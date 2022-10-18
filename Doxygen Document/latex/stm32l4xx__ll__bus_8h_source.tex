@@ -1,0 +1,468 @@
+\hypertarget{stm32l4xx__ll__bus_8h_source}{}\doxysection{stm32l4xx\+\_\+ll\+\_\+bus.\+h}
+\label{stm32l4xx__ll__bus_8h_source}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_ll\_bus.h@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_ll\_bus.h}}
+\mbox{\hyperlink{stm32l4xx__ll__bus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{35 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifndef STM32L4xx\_LL\_BUS\_H}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define STM32L4xx\_LL\_BUS\_H}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{40 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32l4xx_8h}{stm32l4xx.h}}"{}}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#if defined(RCC)}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{57 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{64 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_DMA1           RCC\_AHB1ENR\_DMA1EN}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_DMA2           RCC\_AHB1ENR\_DMA2EN}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#if defined(DMAMUX1)}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_DMAMUX1        RCC\_AHB1ENR\_DMAMUX1EN}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DMAMUX1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_FLASH          RCC\_AHB1ENR\_FLASHEN}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_CRC            RCC\_AHB1ENR\_CRCEN}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_TSC            RCC\_AHB1ENR\_TSCEN}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#if defined(DMA2D)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_DMA2D          RCC\_AHB1ENR\_DMA2DEN}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DMA2D */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#if defined(GFXMMU)}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_GFXMMU         RCC\_AHB1ENR\_GFXMMUEN}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* GFXMMU */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define LL\_AHB1\_GRP1\_PERIPH\_SRAM1          RCC\_AHB1SMENR\_SRAM1SMEN}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOA          RCC\_AHB2ENR\_GPIOAEN}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOB          RCC\_AHB2ENR\_GPIOBEN}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOC          RCC\_AHB2ENR\_GPIOCEN}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#if defined(GPIOD)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOD          RCC\_AHB2ENR\_GPIODEN}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*GPIOD*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#if defined(GPIOE)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOE          RCC\_AHB2ENR\_GPIOEEN}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*GPIOE*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#if defined(GPIOF)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOF          RCC\_AHB2ENR\_GPIOFEN}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* GPIOF */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#if defined(GPIOG)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOG          RCC\_AHB2ENR\_GPIOGEN}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* GPIOG */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOH          RCC\_AHB2ENR\_GPIOHEN}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#if defined(GPIOI)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_GPIOI          RCC\_AHB2ENR\_GPIOIEN}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* GPIOI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#if defined(USB\_OTG\_FS)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_OTGFS          RCC\_AHB2ENR\_OTGFSEN}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USB\_OTG\_FS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_ADC            RCC\_AHB2ENR\_ADCEN}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#if defined(DCMI)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_DCMI           RCC\_AHB2ENR\_DCMIEN}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DCMI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#if defined(AES)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_AES            RCC\_AHB2ENR\_AESEN}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* AES */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#if defined(HASH)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_HASH           RCC\_AHB2ENR\_HASHEN}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HASH */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_RNG            RCC\_AHB2ENR\_RNGEN}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#if defined(OCTOSPIM)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_OSPIM          RCC\_AHB2ENR\_OSPIMEN}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* OCTOSPIM */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#if defined(PKA)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_PKA            RCC\_AHB2ENR\_PKAEN}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PKA */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#if defined(SDMMC1) \&\& defined(RCC\_AHB2ENR\_SDMMC1EN)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_SDMMC1         RCC\_AHB2ENR\_SDMMC1EN}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SDMMC1 \&\& RCC\_AHB2ENR\_SDMMC1EN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_SRAM2          RCC\_AHB2SMENR\_SRAM2SMEN}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#if defined(SRAM3\_BASE)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LL\_AHB2\_GRP1\_PERIPH\_SRAM3          RCC\_AHB2SMENR\_SRAM3SMEN}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SRAM3\_BASE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define LL\_AHB3\_GRP1\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#if defined(FMC\_Bank1\_R)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LL\_AHB3\_GRP1\_PERIPH\_FMC            RCC\_AHB3ENR\_FMCEN}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FMC\_Bank1\_R */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define LL\_AHB3\_GRP1\_PERIPH\_QSPI           RCC\_AHB3ENR\_QSPIEN}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#if defined(OCTOSPI1)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LL\_AHB3\_GRP1\_PERIPH\_OSPI1          RCC\_AHB3ENR\_OSPI1EN}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* OCTOSPI1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#if defined(OCTOSPI2)}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LL\_AHB3\_GRP1\_PERIPH\_OSPI2          RCC\_AHB3ENR\_OSPI2EN}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* OCTOSPI2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM2           RCC\_APB1ENR1\_TIM2EN}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#if defined(TIM3)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM3           RCC\_APB1ENR1\_TIM3EN}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#if defined(TIM4)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM4           RCC\_APB1ENR1\_TIM4EN}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#if defined(TIM5)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM5           RCC\_APB1ENR1\_TIM5EN}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM6           RCC\_APB1ENR1\_TIM6EN}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_TIM7           RCC\_APB1ENR1\_TIM7EN}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#if defined(LCD)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_LCD            RCC\_APB1ENR1\_LCDEN}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LCD */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#if defined(RCC\_APB1ENR1\_RTCAPBEN)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_RTCAPB         RCC\_APB1ENR1\_RTCAPBEN}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_APB1ENR1\_RTCAPBEN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_WWDG           RCC\_APB1ENR1\_WWDGEN}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#if defined(SPI2)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_SPI2           RCC\_APB1ENR1\_SPI2EN}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SPI2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_SPI3           RCC\_APB1ENR1\_SPI3EN}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_USART2         RCC\_APB1ENR1\_USART2EN}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#if defined(USART3)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_USART3         RCC\_APB1ENR1\_USART3EN}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USART3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_UART4          RCC\_APB1ENR1\_UART4EN}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_UART5          RCC\_APB1ENR1\_UART5EN}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_I2C1           RCC\_APB1ENR1\_I2C1EN}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#if defined(I2C2)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_I2C2           RCC\_APB1ENR1\_I2C2EN}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_I2C3           RCC\_APB1ENR1\_I2C3EN}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#if defined(CRS)}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_CRS            RCC\_APB1ENR1\_CRSEN}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* CRS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_CAN1           RCC\_APB1ENR1\_CAN1EN}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#if defined(CAN2)}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_CAN2           RCC\_APB1ENR1\_CAN2EN}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* CAN2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#if defined(USB)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_USB            RCC\_APB1ENR1\_USBFSEN}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_PWR            RCC\_APB1ENR1\_PWREN}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_DAC1           RCC\_APB1ENR1\_DAC1EN}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_OPAMP          RCC\_APB1ENR1\_OPAMPEN}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define LL\_APB1\_GRP1\_PERIPH\_LPTIM1         RCC\_APB1ENR1\_LPTIM1EN}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define LL\_APB1\_GRP2\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define LL\_APB1\_GRP2\_PERIPH\_LPUART1        RCC\_APB1ENR2\_LPUART1EN}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define LL\_APB1\_GRP2\_PERIPH\_I2C4           RCC\_APB1ENR2\_I2C4EN}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#if defined(SWPMI1)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define LL\_APB1\_GRP2\_PERIPH\_SWPMI1         RCC\_APB1ENR2\_SWPMI1EN}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SWPMI1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define LL\_APB1\_GRP2\_PERIPH\_LPTIM2         RCC\_APB1ENR2\_LPTIM2EN}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_ALL            0xFFFFFFFFU}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_SYSCFG         RCC\_APB2ENR\_SYSCFGEN}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_FW             RCC\_APB2ENR\_FWEN}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#if defined(SDMMC1) \&\& defined(RCC\_APB2ENR\_SDMMC1EN)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_SDMMC1         RCC\_APB2ENR\_SDMMC1EN}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SDMMC1 \&\& RCC\_APB2ENR\_SDMMC1EN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_TIM1           RCC\_APB2ENR\_TIM1EN}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_SPI1           RCC\_APB2ENR\_SPI1EN}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#if defined(TIM8)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_TIM8           RCC\_APB2ENR\_TIM8EN}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM8 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_USART1         RCC\_APB2ENR\_USART1EN}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_TIM15          RCC\_APB2ENR\_TIM15EN}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_TIM16          RCC\_APB2ENR\_TIM16EN}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#if defined(TIM17)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_TIM17          RCC\_APB2ENR\_TIM17EN}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM17 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_SAI1           RCC\_APB2ENR\_SAI1EN}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#if defined(SAI2)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_SAI2           RCC\_APB2ENR\_SAI2EN}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SAI2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#if defined(DFSDM1\_Channel0)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_DFSDM1         RCC\_APB2ENR\_DFSDM1EN}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DFSDM1\_Channel0 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#if defined(LTDC)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_LTDC           RCC\_APB2ENR\_LTDCEN}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LTDC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#if defined(DSI)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_DSI            RCC\_APB2ENR\_DSIEN}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DSI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#if defined(DFSDM1\_Channel0)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define LL\_APB2\_GRP1\_PERIPH\_DFSDM          LL\_APB2\_GRP1\_PERIPH\_DFSDM1}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DFSDM1\_Channel0 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{294 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{295 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{327 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{328 \{}
+\DoxyCodeLine{329   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{330   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1ENR, Periphs);}
+\DoxyCodeLine{331   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{332   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1ENR, Periphs);}
+\DoxyCodeLine{333   (void)tmpreg;}
+\DoxyCodeLine{334 \}}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{359 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_AHB1\_GRP1\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{360 \{}
+\DoxyCodeLine{361   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1ENR, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{362 \}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{387 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{388 \{}
+\DoxyCodeLine{389   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1ENR, Periphs);}
+\DoxyCodeLine{390 \}}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{416 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{417 \{}
+\DoxyCodeLine{418   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1RSTR, Periphs);}
+\DoxyCodeLine{419 \}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{445 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{446 \{}
+\DoxyCodeLine{447   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1RSTR, Periphs);}
+\DoxyCodeLine{448 \}}
+\DoxyCodeLine{449 }
+\DoxyCodeLine{475 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{476 \{}
+\DoxyCodeLine{477   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{478   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1SMENR, Periphs);}
+\DoxyCodeLine{479   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{480   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1SMENR, Periphs);}
+\DoxyCodeLine{481   (void)tmpreg;}
+\DoxyCodeLine{482 \}}
+\DoxyCodeLine{483 }
+\DoxyCodeLine{509 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB1\_GRP1\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{510 \{}
+\DoxyCodeLine{511   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB1SMENR, Periphs);}
+\DoxyCodeLine{512 \}}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{563 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{564 \{}
+\DoxyCodeLine{565   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{566   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2ENR, Periphs);}
+\DoxyCodeLine{567   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{568   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2ENR, Periphs);}
+\DoxyCodeLine{569   (void)tmpreg;}
+\DoxyCodeLine{570 \}}
+\DoxyCodeLine{571 }
+\DoxyCodeLine{613 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_AHB2\_GRP1\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{614 \{}
+\DoxyCodeLine{615   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2ENR, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{616 \}}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{659 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{660 \{}
+\DoxyCodeLine{661   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2ENR, Periphs);}
+\DoxyCodeLine{662 \}}
+\DoxyCodeLine{663 }
+\DoxyCodeLine{706 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{707 \{}
+\DoxyCodeLine{708   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2RSTR, Periphs);}
+\DoxyCodeLine{709 \}}
+\DoxyCodeLine{710 }
+\DoxyCodeLine{753 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{754 \{}
+\DoxyCodeLine{755   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2RSTR, Periphs);}
+\DoxyCodeLine{756 \}}
+\DoxyCodeLine{757 }
+\DoxyCodeLine{803 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{804 \{}
+\DoxyCodeLine{805   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{806   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2SMENR, Periphs);}
+\DoxyCodeLine{807   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{808   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2SMENR, Periphs);}
+\DoxyCodeLine{809   (void)tmpreg;}
+\DoxyCodeLine{810 \}}
+\DoxyCodeLine{811 }
+\DoxyCodeLine{857 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB2\_GRP1\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{858 \{}
+\DoxyCodeLine{859   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB2SMENR, Periphs);}
+\DoxyCodeLine{860 \}}
+\DoxyCodeLine{861 }
+\DoxyCodeLine{885 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{886 \{}
+\DoxyCodeLine{887   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{888   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3ENR, Periphs);}
+\DoxyCodeLine{889   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{890   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3ENR, Periphs);}
+\DoxyCodeLine{891   (void)tmpreg;}
+\DoxyCodeLine{892 \}}
+\DoxyCodeLine{893 }
+\DoxyCodeLine{909 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_AHB3\_GRP1\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{910 \{}
+\DoxyCodeLine{911   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3ENR, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{912 \}}
+\DoxyCodeLine{913 }
+\DoxyCodeLine{929 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{930 \{}
+\DoxyCodeLine{931   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3ENR, Periphs);}
+\DoxyCodeLine{932 \}}
+\DoxyCodeLine{933 }
+\DoxyCodeLine{950 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{951 \{}
+\DoxyCodeLine{952   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3RSTR, Periphs);}
+\DoxyCodeLine{953 \}}
+\DoxyCodeLine{954 }
+\DoxyCodeLine{971 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{972 \{}
+\DoxyCodeLine{973   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3RSTR, Periphs);}
+\DoxyCodeLine{974 \}}
+\DoxyCodeLine{975 }
+\DoxyCodeLine{991 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{992 \{}
+\DoxyCodeLine{993   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{994   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3SMENR, Periphs);}
+\DoxyCodeLine{995   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{996   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3SMENR, Periphs);}
+\DoxyCodeLine{997   (void)tmpreg;}
+\DoxyCodeLine{998 \}}
+\DoxyCodeLine{999 }
+\DoxyCodeLine{1015 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_AHB3\_GRP1\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1016 \{}
+\DoxyCodeLine{1017   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>AHB3SMENR, Periphs);}
+\DoxyCodeLine{1018 \}}
+\DoxyCodeLine{1019 }
+\DoxyCodeLine{1087 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1088 \{}
+\DoxyCodeLine{1089   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1090   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR1, Periphs);}
+\DoxyCodeLine{1091   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1092   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR1, Periphs);}
+\DoxyCodeLine{1093   (void)tmpreg;}
+\DoxyCodeLine{1094 \}}
+\DoxyCodeLine{1095 }
+\DoxyCodeLine{1111 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1112 \{}
+\DoxyCodeLine{1113   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1114   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR2, Periphs);}
+\DoxyCodeLine{1115   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1116   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR2, Periphs);}
+\DoxyCodeLine{1117   (void)tmpreg;}
+\DoxyCodeLine{1118 \}}
+\DoxyCodeLine{1119 }
+\DoxyCodeLine{1179 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_APB1\_GRP1\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{1180 \{}
+\DoxyCodeLine{1181   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR1, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{1182 \}}
+\DoxyCodeLine{1183 }
+\DoxyCodeLine{1199 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_APB1\_GRP2\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{1200 \{}
+\DoxyCodeLine{1201   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR2, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{1202 \}}
+\DoxyCodeLine{1203 }
+\DoxyCodeLine{1263 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1264 \{}
+\DoxyCodeLine{1265   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR1, Periphs);}
+\DoxyCodeLine{1266 \}}
+\DoxyCodeLine{1267 }
+\DoxyCodeLine{1283 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1284 \{}
+\DoxyCodeLine{1285   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1ENR2, Periphs);}
+\DoxyCodeLine{1286 \}}
+\DoxyCodeLine{1287 }
+\DoxyCodeLine{1344 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{1345 \{}
+\DoxyCodeLine{1346   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1RSTR1, Periphs);}
+\DoxyCodeLine{1347 \}}
+\DoxyCodeLine{1348 }
+\DoxyCodeLine{1365 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{1366 \{}
+\DoxyCodeLine{1367   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1RSTR2, Periphs);}
+\DoxyCodeLine{1368 \}}
+\DoxyCodeLine{1369 }
+\DoxyCodeLine{1426 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{1427 \{}
+\DoxyCodeLine{1428   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1RSTR1, Periphs);}
+\DoxyCodeLine{1429 \}}
+\DoxyCodeLine{1430 }
+\DoxyCodeLine{1447 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{1448 \{}
+\DoxyCodeLine{1449   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1RSTR2, Periphs);}
+\DoxyCodeLine{1450 \}}
+\DoxyCodeLine{1451 }
+\DoxyCodeLine{1511 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1512 \{}
+\DoxyCodeLine{1513   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1514   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR1, Periphs);}
+\DoxyCodeLine{1515   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1516   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR1, Periphs);}
+\DoxyCodeLine{1517   (void)tmpreg;}
+\DoxyCodeLine{1518 \}}
+\DoxyCodeLine{1519 }
+\DoxyCodeLine{1535 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1536 \{}
+\DoxyCodeLine{1537   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1538   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR2, Periphs);}
+\DoxyCodeLine{1539   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1540   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR2, Periphs);}
+\DoxyCodeLine{1541   (void)tmpreg;}
+\DoxyCodeLine{1542 \}}
+\DoxyCodeLine{1543 }
+\DoxyCodeLine{1603 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP1\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1604 \{}
+\DoxyCodeLine{1605   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR1, Periphs);}
+\DoxyCodeLine{1606 \}}
+\DoxyCodeLine{1607 }
+\DoxyCodeLine{1623 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB1\_GRP2\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1624 \{}
+\DoxyCodeLine{1625   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB1SMENR2, Periphs);}
+\DoxyCodeLine{1626 \}}
+\DoxyCodeLine{1627 }
+\DoxyCodeLine{1673 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_EnableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1674 \{}
+\DoxyCodeLine{1675   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1676   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2ENR, Periphs);}
+\DoxyCodeLine{1677   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1678   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2ENR, Periphs);}
+\DoxyCodeLine{1679   (void)tmpreg;}
+\DoxyCodeLine{1680 \}}
+\DoxyCodeLine{1681 }
+\DoxyCodeLine{1719 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} uint32\_t LL\_APB2\_GRP1\_IsEnabledClock(uint32\_t Periphs)}
+\DoxyCodeLine{1720 \{}
+\DoxyCodeLine{1721   \textcolor{keywordflow}{return} ((\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2ENR, Periphs) == Periphs) ? 1UL : 0UL);}
+\DoxyCodeLine{1722 \}}
+\DoxyCodeLine{1723 }
+\DoxyCodeLine{1759 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_DisableClock(uint32\_t Periphs)}
+\DoxyCodeLine{1760 \{}
+\DoxyCodeLine{1761   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2ENR, Periphs);}
+\DoxyCodeLine{1762 \}}
+\DoxyCodeLine{1763 }
+\DoxyCodeLine{1800 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_ForceReset(uint32\_t Periphs)}
+\DoxyCodeLine{1801 \{}
+\DoxyCodeLine{1802   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2RSTR, Periphs);}
+\DoxyCodeLine{1803 \}}
+\DoxyCodeLine{1804 }
+\DoxyCodeLine{1841 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_ReleaseReset(uint32\_t Periphs)}
+\DoxyCodeLine{1842 \{}
+\DoxyCodeLine{1843   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2RSTR, Periphs);}
+\DoxyCodeLine{1844 \}}
+\DoxyCodeLine{1845 }
+\DoxyCodeLine{1881 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_EnableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1882 \{}
+\DoxyCodeLine{1883   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t tmpreg;}
+\DoxyCodeLine{1884   \mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{SET\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2SMENR, Periphs);}
+\DoxyCodeLine{1885   \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}}
+\DoxyCodeLine{1886   tmpreg = \mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2SMENR, Periphs);}
+\DoxyCodeLine{1887   (void)tmpreg;}
+\DoxyCodeLine{1888 \}}
+\DoxyCodeLine{1889 }
+\DoxyCodeLine{1925 \mbox{\hyperlink{cmsis__armcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\_\_STATIC\_INLINE}} \textcolor{keywordtype}{void} LL\_APB2\_GRP1\_DisableClockStopSleep(uint32\_t Periphs)}
+\DoxyCodeLine{1926 \{}
+\DoxyCodeLine{1927   \mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{CLEAR\_BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/>APB2SMENR, Periphs);}
+\DoxyCodeLine{1928 \}}
+\DoxyCodeLine{1929 }
+\DoxyCodeLine{1943 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* defined(RCC) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1944 }
+\DoxyCodeLine{1949 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1950 \}}
+\DoxyCodeLine{1951 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1952 }
+\DoxyCodeLine{1953 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32L4xx\_LL\_BUS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1954 }
+
+\end{DoxyCode}

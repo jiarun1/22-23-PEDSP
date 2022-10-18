@@ -1,0 +1,192 @@
+\hypertarget{_l_c_d1602_8h_source}{}\doxysection{LCD1602.\+h}
+\label{_l_c_d1602_8h_source}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.h@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.h}}
+\mbox{\hyperlink{_l_c_d1602_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/********************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * \(\backslash\)file      : LCD1602.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ * \(\backslash\)brief     : The code is to provide a easier way to use LCD1602}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * \(\backslash\)copyright : Copyright Jiarun LIU}}
+\DoxyCodeLine{6 \textcolor{comment}{ * \(\backslash\)date      : 2022/10/14}}
+\DoxyCodeLine{7 \textcolor{comment}{ * \(\backslash\)author    : Jiarun LIU}}
+\DoxyCodeLine{8 \textcolor{comment}{ * \(\backslash\)version   : V1.1}}
+\DoxyCodeLine{9 \textcolor{comment}{*********************************************************/}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef LCD1602\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define LCD1602\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifdef STM32L476xx}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{    \#include "{}stm32l4xx\_hal.h"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define LCD1602\_MAX\_WRITTER\_BUFFER\_SIZE     256}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define LCD1602\_Delay\_ms(ms)    (HAL\_Delay(ms))}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{//\#define LCD1602\_US\_TIMER      // uncommit if define the LCD1602\_Delay\_us(us) function}}
+\DoxyCodeLine{24 \textcolor{comment}{//\#define LCD1602\_Delay\_us(us)  ()}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 Connection Mode-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LCD1602\_MODE\_RW\_STATE   ((uint8\_t)(1 << 1)) }\textcolor{comment}{//< 1: Connect RW       ; 0: Not Connect RW}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define LCD1602\_MODE\_DATA\_STATE ((uint8\_t)(1 << 2)) }\textcolor{comment}{//< 0: 8 Pin Connection  ; 1: 4 Pin Connection}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define LCD1602\_MODE\_INIT\_SET\_1 ((uint8\_t)(1 << 3)) }\textcolor{comment}{//< 0: the lcd1602 pin unset;}}
+\DoxyCodeLine{30                                                     \textcolor{comment}{//< 1: the lcd1602 pin set}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define LCD1602\_MODE\_INIT\_SET\_2 ((uint8\_t)(1 << 4)) }\textcolor{comment}{//< 0: the lcd1602 pin unset;}}
+\DoxyCodeLine{32                                                     \textcolor{comment}{//< 1: the lcd1602 pin set}}
+\DoxyCodeLine{33 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 Connection Mode END-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 R/W Mode-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define LCD1602\_WRITE\_MODE      0}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define LCD1602\_READ\_MODE       1}}
+\DoxyCodeLine{38 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 R/W Mode-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 RS Mode-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_MODE    0}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define LCD1602\_DATA\_MODE       1}}
+\DoxyCodeLine{43 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 RS Mode END-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 Commands List-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CLEAR                   ((uint8\_t)0x01) }\textcolor{comment}{//< Clear Display and return cursor to home position}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CURSOR\_HOME             ((uint8\_t)0x02) }\textcolor{comment}{//< Return Cursor to home position(DDRAM Unchanged)}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_ENTRY\_MODE              ((uint8\_t)0x04)}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_ENTRY\_MODE\_CURSOR\_DIR   ((uint8\_t)0x02) }\textcolor{comment}{//< Set Cursor Move Direction}}
+\DoxyCodeLine{53                                                                 \textcolor{comment}{//< 0: Decrement  ; 1: Increment}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_ENTRY\_MODE\_SHIFT        ((uint8\_t)0x01) }\textcolor{comment}{//< 0: NO Display Shift}}
+\DoxyCodeLine{55                                                                 \textcolor{comment}{//< 1: Have Display Shift}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_DISPLAY\_MODE            ((uint8\_t)0x08) }\textcolor{comment}{//< Set Module Display Mode}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_DISPLAY\_ON\_OFF          ((uint8\_t)0x04) }\textcolor{comment}{//< 0: Display OFF; 1: Display ON}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_DISPLAY\_CURSOR          ((uint8\_t)0x02) }\textcolor{comment}{//< 0: Cursor OFF ; 1: Cursor ON}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_DISPLAY\_CURSOR\_BLINK    ((uint8\_t)0x01) }\textcolor{comment}{//< 0: Cursor Blink off;}}
+\DoxyCodeLine{61                                                                 \textcolor{comment}{//< 1: Cursor Blink on}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CURSOR\_DISPLAY\_MODE     ((uint8\_t)0x10)}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CURSOR\_SHIFT\_ON         ((uint8\_t)0x08) }\textcolor{comment}{//< 0: Cursor Move ; 1: Display Shift}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CURSOR\_SHIFT\_DIR        ((uint8\_t)0x04) }\textcolor{comment}{//< 0: Shift Left  ; 1: Shift Right}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_FUNCTION\_SET            ((uint8\_t)0x20)}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_FUNCTION\_DATA\_LENGTH    ((uint8\_t)0x10) }\textcolor{comment}{//< 0: 4 bit       ; 1: 8 bit}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_FUNCTION\_LINE\_NUMBER    ((uint8\_t)0x08) }\textcolor{comment}{//< 0: 1/8 Or 1/11 Duty (1 Line)}}
+\DoxyCodeLine{70                                                                 \textcolor{comment}{//< 1: 1/16 Duty (2 Line)}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_FUNCTION\_FONT           ((uint8\_t)0x04) }\textcolor{comment}{//< 0: 5*7 dots    ; 1: 5*19 dots}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_CGRAM\_ADDR\_SET          ((uint8\_t)0x40) }\textcolor{comment}{//< bit 0-\/5 are CGMAR ADDRESS (Receive OR Write after setting)}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_DDRAM\_ADDR\_SET          ((uint8\_t)0x80) }\textcolor{comment}{//< bit 0-\/6 are CGMAR ADDRESS (Receive OR Write after setting)}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define LCD1602\_COMMAND\_READBUSY\_ADDR\_COUNTER   ((uint8\_t)0x80) }\textcolor{comment}{//< when in read mode}}
+\DoxyCodeLine{78 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/LCD1602 Commands List END-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{enum} \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729b}{LCD1602\_Pin\_Name\_e}}\{}
+\DoxyCodeLine{82     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729babfbf9f4a29e124711d41520221c7c223}{LCD1602\_RS\_PIN}}  = 0,  \textcolor{comment}{//< 0: Command   ; 1: Data}}
+\DoxyCodeLine{83     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3ff61ea184a4f4f5985dd9474ee4f743}{LCD1602\_RW\_PIN}}  = 1,    \textcolor{comment}{//< 0: Write     ; 1: Read}}
+\DoxyCodeLine{84     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba5586f86d04aff24d683bafc63f8f242b}{LCD1602\_EN\_PIN}}  = 2,    \textcolor{comment}{//< 0: Disable   ; 1: Enable}}
+\DoxyCodeLine{85     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba19609757d6540d914a646bcc64e28000}{LCD1602\_DB0\_PIN}} = 3,}
+\DoxyCodeLine{86     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba6dc04333e74c181a0c67a9f24d846555}{LCD1602\_DB1\_PIN}} = 4,}
+\DoxyCodeLine{87     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba32b27217d4443a5dbef608d807b795f4}{LCD1602\_DB2\_PIN}} = 5,}
+\DoxyCodeLine{88     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba7e4dd423f9e4a45a18d9b65914903288}{LCD1602\_DB3\_PIN}} = 6,}
+\DoxyCodeLine{89     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba1920bf8e9bd06682106e7c8d573b2470}{LCD1602\_DB4\_PIN}} = 7,}
+\DoxyCodeLine{90     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba242400a81972e933abf0469c63659140}{LCD1602\_DB5\_PIN}} = 8,}
+\DoxyCodeLine{91     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729bab427109c14384662991d761e2e4ef496}{LCD1602\_DB6\_PIN}} = 9,}
+\DoxyCodeLine{92     \mbox{\hyperlink{_l_c_d1602_8h_adf4c49853b73adb10f0294224536729ba3a854042e8509e935c2f4144e16fcf61}{LCD1602\_DB7\_PIN}} = 10,}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{96     \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ad97b0238b4c45fc170dda7bc643bbc30}{LCD1602\_OK}}                = 0,}
+\DoxyCodeLine{97     \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08ace6167f4591493ea13b8b63f7ed59581}{LCD1602\_INIT\_PIN\_UNSET}}    = 1,}
+\DoxyCodeLine{98     \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a7036590dccadc8534995cd35ee3db377}{LCD1602\_NO\_READ\_PIN}}  = 2,}
+\DoxyCodeLine{99     \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08a155beb841b60ac68fcd1a516993a1348}{LCD1602\_NO\_READ\_ADDR}}    = 3,}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \}\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{104     \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbca30f8107d82030033707f7878ef01e384}{LCD1602\_WRITE}}  = \mbox{\hyperlink{_l_c_d1602_8h_a512c5143dc43601e13185870bb0d5722}{LCD1602\_WRITE\_MODE}},}
+\DoxyCodeLine{105     \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbcac00e34a05dc3865c1977f8ff247b1dec}{LCD1602\_READ}}    = \mbox{\hyperlink{_l_c_d1602_8h_a8772697149e07a7b7aea7d828a9a553d}{LCD1602\_READ\_MODE}}}
+\DoxyCodeLine{106 \}\mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}{LCD1602\_RW\_e}};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{109     \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a063f515fb5b1042581d3b6a7d0287614}{LCD1602\_COMMAND}} = \mbox{\hyperlink{_l_c_d1602_8h_afc266607df496e72492b88d811ce7b2d}{LCD1602\_COMMAND\_MODE}},}
+\DoxyCodeLine{110     \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0a8948443789c4aa60e07b3a959ae4beed}{LCD1602\_DATA}}    = \mbox{\hyperlink{_l_c_d1602_8h_a7d7fed09441081829c520454d5c1bddf}{LCD1602\_DATA\_MODE}}}
+\DoxyCodeLine{111 \}\mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\_CMD\_DATA\_e}};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{115     \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{116         GPIO\_TypeDef* \mbox{\hyperlink{struct_l_c_d1602__t_a881e0174c973b54edd8ff03531f1c6e2}{GPIOx}};}
+\DoxyCodeLine{117         uint16\_t \mbox{\hyperlink{struct_l_c_d1602__t_aeb331c777039af5c7a384a1a0aa225be}{GPIO\_Pin}};}
+\DoxyCodeLine{118     \}Pins[12];}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     uint8\_t \mbox{\hyperlink{struct_l_c_d1602__t_ae22eecf91bf84fe41e8d04d7cc3c481b}{ConnectMode}};}
+\DoxyCodeLine{121     \mbox{\hyperlink{_l_c_d1602_8h_a2291c455da007ae7e39bef6dc663bcbc}{LCD1602\_RW\_e}} \mbox{\hyperlink{struct_l_c_d1602__t_aa92daf7593b315659c6f7f7e74780714}{RWMode}};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     uint16\_t \mbox{\hyperlink{struct_l_c_d1602__t_afa0a144f78a5d66bb8ee5e7dc804e439}{Cursor\_Pos}};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \}\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 }
+\DoxyCodeLine{143 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a0ba02461a3e073bdb6d63103a635bf22}{LCD1602\_Pins\_Set}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev,}
+\DoxyCodeLine{144                                              GPIO\_TypeDef* EN\_GPIOx, uint16\_t EN\_GPIO\_Pin,}
+\DoxyCodeLine{145                                              GPIO\_TypeDef* RS\_GPIOx, uint16\_t RS\_GPIO\_Pin);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{comment}{/*}}
+\DoxyCodeLine{148 \textcolor{comment}{ * \(\backslash\)brief     : This Function is used to set the RW Pin if the pin is connected to lcd1602}}
+\DoxyCodeLine{149 \textcolor{comment}{ *}}
+\DoxyCodeLine{150 \textcolor{comment}{ * \(\backslash\)copyright : Copyright Jiarun LIU}}
+\DoxyCodeLine{151 \textcolor{comment}{ * \(\backslash\)date      : 2022/10/15}}
+\DoxyCodeLine{152 \textcolor{comment}{ * \(\backslash\)author    : Jiarun LIU}}
+\DoxyCodeLine{153 \textcolor{comment}{ *}}
+\DoxyCodeLine{154 \textcolor{comment}{ * \(\backslash\)param[in] : Dev: the address of the device structure}}
+\DoxyCodeLine{155 \textcolor{comment}{ * \(\backslash\)param[in] : RW\_GPIOx: GPIOx of the pin used to connected to LCD1602}}
+\DoxyCodeLine{156 \textcolor{comment}{ * \(\backslash\)param[in] : RW\_GPIO\_Pin: GPIOx of the pin used to connected to LCD1602}}
+\DoxyCodeLine{157 \textcolor{comment}{ * \(\backslash\)return    : used to detect the error @LCD1602\_ERROR\_CODE\_e}}
+\DoxyCodeLine{158 \textcolor{comment}{ *}}
+\DoxyCodeLine{159 \textcolor{comment}{ * \(\backslash\)include   : <stm32??xx\_hal\_gpio.h>  ?? is based on the core type(for stm32l4xx: <stm32l4xx\_hal\_gpio.h>)}}
+\DoxyCodeLine{160 \textcolor{comment}{ */}}
+\DoxyCodeLine{161 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a30b901663d290c7afbdfec063de23a29}{LCD1602\_RW\_Pin\_Set}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev, GPIO\_TypeDef* RW\_GPIOx, uint16\_t RW\_GPIO\_Pin);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{177 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_ac0d791e16cb2839b9ff818be3d444d13}{LCD1602\_4Pin\_Set}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev, GPIO\_TypeDef* DB4\_GPIOx, uint16\_t DB4\_GPIO\_Pin}
+\DoxyCodeLine{178                                                            , GPIO\_TypeDef* DB5\_GPIOx, uint16\_t DB5\_GPIO\_Pin}
+\DoxyCodeLine{179                                                            , GPIO\_TypeDef* DB6\_GPIOx, uint16\_t DB6\_GPIO\_Pin}
+\DoxyCodeLine{180                                                            , GPIO\_TypeDef* DB7\_GPIOx, uint16\_t DB7\_GPIO\_Pin);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{196 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a5eeef58c003f86f9ad3d08b657c8ac1b}{LCD1602\_8Pin\_Set}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev, GPIO\_TypeDef* DB0\_GPIOx, uint16\_t DB0\_GPIO\_Pin}
+\DoxyCodeLine{197                                                            , GPIO\_TypeDef* DB1\_GPIOx, uint16\_t DB1\_GPIO\_Pin}
+\DoxyCodeLine{198                                                            , GPIO\_TypeDef* DB2\_GPIOx, uint16\_t DB2\_GPIO\_Pin}
+\DoxyCodeLine{199                                                            , GPIO\_TypeDef* DB3\_GPIOx, uint16\_t DB3\_GPIO\_Pin}
+\DoxyCodeLine{200                                                            , GPIO\_TypeDef* DB4\_GPIOx, uint16\_t DB4\_GPIO\_Pin}
+\DoxyCodeLine{201                                                            , GPIO\_TypeDef* DB5\_GPIOx, uint16\_t DB5\_GPIO\_Pin}
+\DoxyCodeLine{202                                                            , GPIO\_TypeDef* DB6\_GPIOx, uint16\_t DB6\_GPIO\_Pin}
+\DoxyCodeLine{203                                                            , GPIO\_TypeDef* DB7\_GPIOx, uint16\_t DB7\_GPIO\_Pin);}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{217 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a49f35110ca3b969811675a5c716425cc}{LCD1602\_Init}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev);}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{233 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a8af40ee2246ccdb70bf786bcfb9fa00c}{LCD1602\_Printf}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format,...);}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 \textcolor{comment}{/*}}
+\DoxyCodeLine{236 \textcolor{comment}{ * \(\backslash\)brief     : This Function is used to set the cursor}}
+\DoxyCodeLine{237 \textcolor{comment}{ *}}
+\DoxyCodeLine{238 \textcolor{comment}{ * \(\backslash\)copyright : Copyright Jiarun LIU}}
+\DoxyCodeLine{239 \textcolor{comment}{ * \(\backslash\)date      : 2022/10/17}}
+\DoxyCodeLine{240 \textcolor{comment}{ * \(\backslash\)author    : Jiarun LIU}}
+\DoxyCodeLine{241 \textcolor{comment}{ *}}
+\DoxyCodeLine{242 \textcolor{comment}{ * \(\backslash\)param[in] : Dev: the address of the device structure}}
+\DoxyCodeLine{243 \textcolor{comment}{ * \(\backslash\)param[in] : cols: the col of the target cursor; start at 0}}
+\DoxyCodeLine{244 \textcolor{comment}{ * \(\backslash\)param[in] : rows: the row of the target cursor; start at 0}}
+\DoxyCodeLine{245 \textcolor{comment}{ * \(\backslash\)return    : used to detect the error @LCD1602\_ERROR\_CODE\_e}}
+\DoxyCodeLine{246 \textcolor{comment}{ *}}
+\DoxyCodeLine{247 \textcolor{comment}{ * \(\backslash\)include   : <stm32??xx\_hal\_gpio.h>  ?? is based on the core type(for stm32l4xx: <stm32l4xx\_hal\_gpio.h>)}}
+\DoxyCodeLine{248 \textcolor{comment}{ */}}
+\DoxyCodeLine{249 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a543c16cf8ef88348661cb03c5b461c23}{LCD1602\_SetCursor}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev, uint16\_t cols, uint16\_t rows);}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{263 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a1eb1444e13bb13e773b1b773d2710053}{LCD1602\_Clear}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev);}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{277 \textcolor{keyword}{extern} \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\_ERROR\_CODE\_e}} \mbox{\hyperlink{_l_c_d1602_8h_a0879c1a10bc1d5614b11f9091cc05cef}{LCD1602\_Cursor\_Home}}(\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\_t}}* Dev);}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LCD1602\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

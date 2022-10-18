@@ -1,0 +1,51 @@
+\hypertarget{stm32l4xx__hal__flash__ex_8h_source}{}\doxysection{stm32l4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h}
+\label{stm32l4xx__hal__flash__ex_8h_source}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_hal\_flash\_ex.h@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_hal\_flash\_ex.h}}
+\mbox{\hyperlink{stm32l4xx__hal__flash__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{18 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef STM32L4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define STM32L4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32l4xx__hal__def_8h}{stm32l4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#if defined (FLASH\_CFGR\_LVEN)}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define FLASH\_LVE\_PIN\_CTRL     0x00000000U       }}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define FLASH\_LVE\_PIN\_FORCED   FLASH\_CFGR\_LVEN   }}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FLASH\_CFGR\_LVEN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{65 \textcolor{comment}{/* Extended Program operation functions  *************************************/}}
+\DoxyCodeLine{69 \mbox{\hyperlink{stm32l4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex___exported___functions___group1_ga9c4e0c7b4f528b7cccae6ad610eb5953}{HAL\_FLASHEx\_Erase}}(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit, uint32\_t *PageError);}
+\DoxyCodeLine{70 \mbox{\hyperlink{stm32l4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex___exported___functions___group1_gaf58c6764859e4febc21abe462dfb2615}{HAL\_FLASHEx\_Erase\_IT}}(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit);}
+\DoxyCodeLine{71 \mbox{\hyperlink{stm32l4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex___exported___functions___group1_ga001dd4a8defa9eb24a17c4df5953a41d}{HAL\_FLASHEx\_OBProgram}}(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{72 \textcolor{keywordtype}{void}              \mbox{\hyperlink{group___f_l_a_s_h_ex___exported___functions___group1_ga6d45d5442b8147533b1100ec40fe75d7}{HAL\_FLASHEx\_OBGetConfig}}(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#if defined (FLASH\_CFGR\_LVEN)}}
+\DoxyCodeLine{81 \mbox{\hyperlink{stm32l4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_FLASHEx\_ConfigLVEPin(uint32\_t ConfigLVE);}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FLASH\_CFGR\_LVEN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91 \textcolor{comment}{/* Private function -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___f_l_a_s_h_ex___private___functions_gaeb338db00621612c920bad80cefe9dea}{FLASH\_PageErase}}(uint32\_t Page, uint32\_t Banks);}
+\DoxyCodeLine{96 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___f_l_a_s_h_ex___private___functions_ga0881881ce55e54e123206bc2e0dc62f3}{FLASH\_FlushCaches}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{101 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#if defined (FLASH\_CFGR\_LVEN)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define IS\_FLASH\_LVE\_PIN(CFG)  (((CFG) == FLASH\_LVE\_PIN\_CTRL) || ((CFG) == FLASH\_LVE\_PIN\_FORCED))}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FLASH\_CFGR\_LVEN */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{121 \}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32L4xx\_HAL\_FLASH\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{125 }
+
+\end{DoxyCode}

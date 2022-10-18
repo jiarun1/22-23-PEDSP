@@ -1,0 +1,360 @@
+\hypertarget{_l_c_d1602_8c}{}\doxysection{C\+:/\+Users/ljr05/\+One\+Drive -\/ The University of Nottingham/\+Desktop/\+University/\+Year 3/\+Y3 Semestar1/\+PEDSP (EEE2046)/\+Electronics Project/\+Codes/\+LCD1602\+\_\+\+Test\+\_\+\+Code/\+Device/\+LCD1602.c File Reference}
+\label{_l_c_d1602_8c}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.c@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Device/LCD1602.c}}
+{\ttfamily \#include \char`\"{}LCD1602.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_aeef18f37b407a99ac5279d3bacb223f8}{LCD1602\+\_\+\+RW\+\_\+\+Change}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\item 
+static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a960c70ffd1c257f7eb40764e4bd047f8}{LCD1602\+\_\+\+Write\+\_\+\+Byte}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}} mode, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to Write the command or data to the device \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_af3e0aa8846304634fa9da2ed5fd5a3dc}{LCD1602\+\_\+\+Read\+\_\+\+Byte}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, \mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}} mode, uint8\+\_\+t $\ast$byte)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to Write the command or data to the device \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a0ba02461a3e073bdb6d63103a635bf22}{LCD1602\+\_\+\+Pins\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$EN\+\_\+\+GPIOx, uint16\+\_\+t EN\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$RS\+\_\+\+GPIOx, uint16\+\_\+t RS\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the RS and EN Pin connected to lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a30b901663d290c7afbdfec063de23a29}{LCD1602\+\_\+\+RW\+\_\+\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$RW\+\_\+\+GPIOx, uint16\+\_\+t RW\+\_\+\+GPIO\+\_\+\+Pin)
+\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_ac0d791e16cb2839b9ff818be3d444d13}{LCD1602\+\_\+4\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$DB4\+\_\+\+GPIOx, uint16\+\_\+t DB4\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB5\+\_\+\+GPIOx, uint16\+\_\+t DB5\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB6\+\_\+\+GPIOx, uint16\+\_\+t DB6\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB7\+\_\+\+GPIOx, uint16\+\_\+t DB7\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set a 4 pin connection lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a5eeef58c003f86f9ad3d08b657c8ac1b}{LCD1602\+\_\+8\+Pin\+\_\+\+Set}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, GPIO\+\_\+\+Type\+Def $\ast$DB0\+\_\+\+GPIOx, uint16\+\_\+t DB0\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB1\+\_\+\+GPIOx, uint16\+\_\+t DB1\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB2\+\_\+\+GPIOx, uint16\+\_\+t DB2\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB3\+\_\+\+GPIOx, uint16\+\_\+t DB3\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB4\+\_\+\+GPIOx, uint16\+\_\+t DB4\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB5\+\_\+\+GPIOx, uint16\+\_\+t DB5\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB6\+\_\+\+GPIOx, uint16\+\_\+t DB6\+\_\+\+GPIO\+\_\+\+Pin, GPIO\+\_\+\+Type\+Def $\ast$DB7\+\_\+\+GPIOx, uint16\+\_\+t DB7\+\_\+\+GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set a 8 pin connection lcd1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a49f35110ca3b969811675a5c716425cc}{LCD1602\+\_\+\+Init}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to Init the device \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a8af40ee2246ccdb70bf786bcfb9fa00c}{LCD1602\+\_\+\+Printf}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to provide the display data (same as printf) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a543c16cf8ef88348661cb03c5b461c23}{LCD1602\+\_\+\+Set\+Cursor}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev, uint16\+\_\+t cols, uint16\+\_\+t rows)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the cursor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a1eb1444e13bb13e773b1b773d2710053}{LCD1602\+\_\+\+Clear}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to clear the display of LCD1602 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} \mbox{\hyperlink{_l_c_d1602_8c_a0879c1a10bc1d5614b11f9091cc05cef}{LCD1602\+\_\+\+Cursor\+\_\+\+Home}} (\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$Dev)
+\begin{DoxyCompactList}\small\item\em \+: This Function is used to set the cursor to home \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{_l_c_d1602_8c_a91e927ab68977f5407ef199f6cb19e2d}{ROW\+\_\+\+ADDRESS}} \mbox{[}$\,$\mbox{]} = \{0x00, 0x40, 0x10, 0x50\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_l_c_d1602_8c_ac0d791e16cb2839b9ff818be3d444d13}\label{_l_c_d1602_8c_ac0d791e16cb2839b9ff818be3d444d13}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_4Pin\_Set@{LCD1602\_4Pin\_Set}}
+\index{LCD1602\_4Pin\_Set@{LCD1602\_4Pin\_Set}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_4Pin\_Set()}{LCD1602\_4Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+4\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB4\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB4\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB5\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB5\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB6\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB6\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB7\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB7\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set a 4 pin connection lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a5eeef58c003f86f9ad3d08b657c8ac1b}\label{_l_c_d1602_8c_a5eeef58c003f86f9ad3d08b657c8ac1b}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_8Pin\_Set@{LCD1602\_8Pin\_Set}}
+\index{LCD1602\_8Pin\_Set@{LCD1602\_8Pin\_Set}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_8Pin\_Set()}{LCD1602\_8Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+8\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB0\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB0\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB1\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB1\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB2\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB2\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB3\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB3\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB4\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB4\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB5\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB5\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB6\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB6\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{DB7\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{DB7\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set a 8 pin connection lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & DB?\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a1eb1444e13bb13e773b1b773d2710053}\label{_l_c_d1602_8c_a1eb1444e13bb13e773b1b773d2710053}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Clear@{LCD1602\_Clear}}
+\index{LCD1602\_Clear@{LCD1602\_Clear}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Clear()}{LCD1602\_Clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to clear the display of LCD1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a0879c1a10bc1d5614b11f9091cc05cef}\label{_l_c_d1602_8c_a0879c1a10bc1d5614b11f9091cc05cef}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Cursor\_Home@{LCD1602\_Cursor\_Home}}
+\index{LCD1602\_Cursor\_Home@{LCD1602\_Cursor\_Home}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Cursor\_Home()}{LCD1602\_Cursor\_Home()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Cursor\+\_\+\+Home (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the cursor to home 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a49f35110ca3b969811675a5c716425cc}\label{_l_c_d1602_8c_a49f35110ca3b969811675a5c716425cc}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Init@{LCD1602\_Init}}
+\index{LCD1602\_Init@{LCD1602\_Init}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Init()}{LCD1602\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to Init the device 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a0ba02461a3e073bdb6d63103a635bf22}\label{_l_c_d1602_8c_a0ba02461a3e073bdb6d63103a635bf22}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Pins\_Set@{LCD1602\_Pins\_Set}}
+\index{LCD1602\_Pins\_Set@{LCD1602\_Pins\_Set}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Pins\_Set()}{LCD1602\_Pins\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Pins\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{EN\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{EN\+\_\+\+GPIO\+\_\+\+Pin,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{RS\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{RS\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the RS and EN Pin connected to lcd1602 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & max\+\_\+character\+: used to identity the device max length \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & EN\+\_\+\+GPIOx\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & EN\+\_\+\+GPIO\+\_\+\+Pin\+: GPIOx of the pin used to connected to LCD1602 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a8af40ee2246ccdb70bf786bcfb9fa00c}\label{_l_c_d1602_8c_a8af40ee2246ccdb70bf786bcfb9fa00c}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Printf@{LCD1602\_Printf}}
+\index{LCD1602\_Printf@{LCD1602\_Printf}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Printf()}{LCD1602\_Printf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Printf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to provide the display data (same as printf) 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & format\+: the format of the input data \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & ...\+: the input variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_af3e0aa8846304634fa9da2ed5fd5a3dc}\label{_l_c_d1602_8c_af3e0aa8846304634fa9da2ed5fd5a3dc}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Read\_Byte@{LCD1602\_Read\_Byte}}
+\index{LCD1602\_Read\_Byte@{LCD1602\_Read\_Byte}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Read\_Byte()}{LCD1602\_Read\_Byte()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Read\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{\mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}}}]{mode,  }\item[{uint8\+\_\+t $\ast$}]{byte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: This Function is used to Write the command or data to the device 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & mode\+: indicate the command or data @\+LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & byte\+: the data in byte need to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_aeef18f37b407a99ac5279d3bacb223f8}\label{_l_c_d1602_8c_aeef18f37b407a99ac5279d3bacb223f8}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_RW\_Change@{LCD1602\_RW\_Change}}
+\index{LCD1602\_RW\_Change@{LCD1602\_RW\_Change}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_RW\_Change()}{LCD1602\_RW\_Change()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+RW\+\_\+\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_l_c_d1602_8c_a30b901663d290c7afbdfec063de23a29}\label{_l_c_d1602_8c_a30b901663d290c7afbdfec063de23a29}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_RW\_Pin\_Set@{LCD1602\_RW\_Pin\_Set}}
+\index{LCD1602\_RW\_Pin\_Set@{LCD1602\_RW\_Pin\_Set}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_RW\_Pin\_Set()}{LCD1602\_RW\_Pin\_Set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+RW\+\_\+\+Pin\+\_\+\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{RW\+\_\+\+GPIOx,  }\item[{uint16\+\_\+t}]{RW\+\_\+\+GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d1602_8c_a543c16cf8ef88348661cb03c5b461c23}\label{_l_c_d1602_8c_a543c16cf8ef88348661cb03c5b461c23}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_SetCursor@{LCD1602\_SetCursor}}
+\index{LCD1602\_SetCursor@{LCD1602\_SetCursor}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_SetCursor()}{LCD1602\_SetCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{uint16\+\_\+t}]{cols,  }\item[{uint16\+\_\+t}]{rows }\end{DoxyParamCaption})}
+
+
+
+\+: This Function is used to set the cursor 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & cols\+: the col of the target cursor; start at 0 \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & rows\+: the row of the target cursor; start at 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) \mbox{\Hypertarget{_l_c_d1602_8c_a960c70ffd1c257f7eb40764e4bd047f8}\label{_l_c_d1602_8c_a960c70ffd1c257f7eb40764e4bd047f8}} 
+\index{LCD1602.c@{LCD1602.c}!LCD1602\_Write\_Byte@{LCD1602\_Write\_Byte}}
+\index{LCD1602\_Write\_Byte@{LCD1602\_Write\_Byte}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{LCD1602\_Write\_Byte()}{LCD1602\_Write\_Byte()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_l_c_d1602_8h_a4a28b728873b54ceaeba6920fbdc7b08}{LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e}} LCD1602\+\_\+\+Write\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_c_d1602__t}{LCD1602\+\_\+t}} $\ast$}]{Dev,  }\item[{\mbox{\hyperlink{_l_c_d1602_8h_aad94ef806211350e51cc9c11ca4124d0}{LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e}}}]{mode,  }\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\+: This Function is used to Write the command or data to the device 
+
+\begin{DoxyCopyright}{Copyright}
+\+: Copyright Jiarun LIU 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+\+: 2022/10/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Jiarun LIU
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & Dev\+: the address of the device structure \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & mode\+: indicate the command or data @\+LCD1602\+\_\+\+CMD\+\_\+\+DATA\+\_\+e \\
+\hline
+\mbox{\texttt{ in}}  & {\em } & byte\+: the data in byte need to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: used to detect the error @\+LCD1602\+\_\+\+ERROR\+\_\+\+CODE\+\_\+e
+\end{DoxyReturn}
+stm32??xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>} ?? is based on the core type(for stm32l4xx\+: \texorpdfstring{$<$}{<}stm32l4xx\+\_\+hal\+\_\+gpio.\+h\texorpdfstring{$>$}{>}) 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_l_c_d1602_8c_a91e927ab68977f5407ef199f6cb19e2d}\label{_l_c_d1602_8c_a91e927ab68977f5407ef199f6cb19e2d}} 
+\index{LCD1602.c@{LCD1602.c}!ROW\_ADDRESS@{ROW\_ADDRESS}}
+\index{ROW\_ADDRESS@{ROW\_ADDRESS}!LCD1602.c@{LCD1602.c}}
+\doxysubsubsection{\texorpdfstring{ROW\_ADDRESS}{ROW\_ADDRESS}}
+{\footnotesize\ttfamily const uint8\+\_\+t ROW\+\_\+\+ADDRESS\mbox{[}$\,$\mbox{]} = \{0x00, 0x40, 0x10, 0x50\}}
+

@@ -1,0 +1,232 @@
+\hypertarget{stm32l4xx__hal__cortex_8h_source}{}\doxysection{stm32l4xx\+\_\+hal\+\_\+cortex.\+h}
+\label{stm32l4xx__hal__cortex_8h_source}\index{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_hal\_cortex.h@{C:/Users/ljr05/OneDrive -\/ The University of Nottingham/Desktop/University/Year 3/Y3 Semestar1/PEDSP (EEE2046)/Electronics Project/Codes/LCD1602\_Test\_Code/Drivers/STM32L4xx\_HAL\_Driver/Inc/stm32l4xx\_hal\_cortex.h}}
+\mbox{\hyperlink{stm32l4xx__hal__cortex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32L4xx\_HAL\_CORTEX\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32L4xx\_HAL\_CORTEX\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32l4xx__hal__def_8h}{stm32l4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#if (\_\_MPU\_PRESENT == 1)}}
+\DoxyCodeLine{49 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51   uint8\_t                Enable;                }
+\DoxyCodeLine{53   uint8\_t                Number;                }
+\DoxyCodeLine{55   uint32\_t               BaseAddress;           }
+\DoxyCodeLine{56   uint8\_t                Size;                  }
+\DoxyCodeLine{58   uint8\_t                SubRegionDisable;      }
+\DoxyCodeLine{60   uint8\_t                TypeExtField;          }
+\DoxyCodeLine{62   uint8\_t                AccessPermission;      }
+\DoxyCodeLine{64   uint8\_t                DisableExec;           }
+\DoxyCodeLine{66   uint8\_t                IsShareable;           }
+\DoxyCodeLine{68   uint8\_t                IsCacheable;           }
+\DoxyCodeLine{70   uint8\_t                IsBufferable;          }
+\DoxyCodeLine{72 \}MPU\_Region\_InitTypeDef;}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MPU\_PRESENT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_0         ((uint32\_t)0x00000007) }}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_1         ((uint32\_t)0x00000006) }}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_2         ((uint32\_t)0x00000005) }}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_3         ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_4         ((uint32\_t)0x00000003) }}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define SYSTICK\_CLKSOURCE\_HCLK\_DIV8       0x00000000U}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define SYSTICK\_CLKSOURCE\_HCLK            0x00000004U}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#if (\_\_MPU\_PRESENT == 1)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define  MPU\_HFNMI\_PRIVDEF\_NONE           0x00000000U}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define  MPU\_HARDFAULT\_NMI                (MPU\_CTRL\_HFNMIENA\_Msk)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define  MPU\_PRIVILEGED\_DEFAULT           (MPU\_CTRL\_PRIVDEFENA\_Msk)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define  MPU\_HFNMI\_PRIVDEF                (MPU\_CTRL\_HFNMIENA\_Msk | MPU\_CTRL\_PRIVDEFENA\_Msk)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define  MPU\_REGION\_ENABLE           ((uint8\_t)0x01)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define  MPU\_REGION\_DISABLE          ((uint8\_t)0x00)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define  MPU\_INSTRUCTION\_ACCESS\_ENABLE      ((uint8\_t)0x00)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define  MPU\_INSTRUCTION\_ACCESS\_DISABLE     ((uint8\_t)0x01)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_SHAREABLE        ((uint8\_t)0x01)}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_NOT\_SHAREABLE    ((uint8\_t)0x00)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_CACHEABLE        ((uint8\_t)0x01)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_NOT\_CACHEABLE    ((uint8\_t)0x00)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_BUFFERABLE       ((uint8\_t)0x01)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define  MPU\_ACCESS\_NOT\_BUFFERABLE   ((uint8\_t)0x00)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define  MPU\_TEX\_LEVEL0              ((uint8\_t)0x00)}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define  MPU\_TEX\_LEVEL1              ((uint8\_t)0x01)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define  MPU\_TEX\_LEVEL2              ((uint8\_t)0x02)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define  MPU\_TEX\_LEVEL4              ((uint8\_t)0x04)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_32B        ((uint8\_t)0x04)}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_64B        ((uint8\_t)0x05)}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_128B       ((uint8\_t)0x06)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_256B       ((uint8\_t)0x07)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_512B       ((uint8\_t)0x08)}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_1KB        ((uint8\_t)0x09)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_2KB        ((uint8\_t)0x0A)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_4KB        ((uint8\_t)0x0B)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_8KB        ((uint8\_t)0x0C)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_16KB       ((uint8\_t)0x0D)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_32KB       ((uint8\_t)0x0E)}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_64KB       ((uint8\_t)0x0F)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_128KB      ((uint8\_t)0x10)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_256KB      ((uint8\_t)0x11)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_512KB      ((uint8\_t)0x12)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_1MB        ((uint8\_t)0x13)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_2MB        ((uint8\_t)0x14)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_4MB        ((uint8\_t)0x15)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_8MB        ((uint8\_t)0x16)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_16MB       ((uint8\_t)0x17)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_32MB       ((uint8\_t)0x18)}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_64MB       ((uint8\_t)0x19)}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_128MB      ((uint8\_t)0x1A)}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_256MB      ((uint8\_t)0x1B)}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_512MB      ((uint8\_t)0x1C)}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_1GB        ((uint8\_t)0x1D)}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_2GB        ((uint8\_t)0x1E)}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define   MPU\_REGION\_SIZE\_4GB        ((uint8\_t)0x1F)}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define  MPU\_REGION\_NO\_ACCESS        ((uint8\_t)0x00)}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define  MPU\_REGION\_PRIV\_RW          ((uint8\_t)0x01)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define  MPU\_REGION\_PRIV\_RW\_URO      ((uint8\_t)0x02)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define  MPU\_REGION\_FULL\_ACCESS      ((uint8\_t)0x03)}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define  MPU\_REGION\_PRIV\_RO          ((uint8\_t)0x05)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define  MPU\_REGION\_PRIV\_RO\_URO      ((uint8\_t)0x06)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER0          ((uint8\_t)0x00)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER1          ((uint8\_t)0x01)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER2          ((uint8\_t)0x02)}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER3          ((uint8\_t)0x03)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER4          ((uint8\_t)0x04)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER5          ((uint8\_t)0x05)}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER6          ((uint8\_t)0x06)}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define  MPU\_REGION\_NUMBER7          ((uint8\_t)0x07)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MPU\_PRESENT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{251 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{260 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{269 \textcolor{comment}{/* Initialization and Configuration functions *****************************/}}
+\DoxyCodeLine{270 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_gad9be53e08b1498adea006e5e037f238f}{HAL\_NVIC\_SetPriorityGrouping}}(uint32\_t PriorityGroup);}
+\DoxyCodeLine{271 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_ga8581a82025a4780efd00876a66e3e91b}{HAL\_NVIC\_SetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t PreemptPriority, uint32\_t SubPriority);}
+\DoxyCodeLine{272 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_gaaad4492c1b25e006d69948a15790352a}{HAL\_NVIC\_EnableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{273 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_ga50ca6290e068821cb84aa168f3e13967}{HAL\_NVIC\_DisableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{274 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_gac83d89028fabdf5d4c38ecf4fbfbefdc}{HAL\_NVIC\_SystemReset}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{275 uint32\_t \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group1_gac3a3f0d53c315523a8e6e7bcac1940cf}{HAL\_SYSTICK\_Config}}(uint32\_t TicksNumb);}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{285 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{286 uint32\_t \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_gaa02bc953fd4fce22248c491a93c4ce40}{HAL\_NVIC\_GetPriorityGrouping}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{287 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga6a21c9d904b0bcf4cb060f7c5c39b6f5}{HAL\_NVIC\_GetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t PriorityGroup, uint32\_t* pPreemptPriority, uint32\_t* pSubPriority);}
+\DoxyCodeLine{288 uint32\_t \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga3bd5802a96f0dcbc00ac3b89b134da3b}{HAL\_NVIC\_GetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{289 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_gaecf50f6c6d0e1fa5f8bd8c1b45309f18}{HAL\_NVIC\_SetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{290 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga0c7d007acf1339ca1bb46f3c6e018ff5}{HAL\_NVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{291 uint32\_t \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_gad3f7598e54fb3d74eaf9abedef704c57}{HAL\_NVIC\_GetActive}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{292 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga3284dc8428996f5b6aa6b3b99e643788}{HAL\_SYSTICK\_CLKSourceConfig}}(uint32\_t CLKSource);}
+\DoxyCodeLine{293 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga5b66b62383261c1e0acef98d344aa4c1}{HAL\_SYSTICK\_IRQHandler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{294 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_r_t_e_x___exported___functions___group2_ga5033855e81ba2071231b60599a3ce9a1}{HAL\_SYSTICK\_Callback}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#if (\_\_MPU\_PRESENT == 1)}}
+\DoxyCodeLine{297 \textcolor{keywordtype}{void} HAL\_MPU\_Enable(uint32\_t MPU\_Control);}
+\DoxyCodeLine{298 \textcolor{keywordtype}{void} HAL\_MPU\_Disable(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{299 \textcolor{keywordtype}{void} HAL\_MPU\_ConfigRegion(MPU\_Region\_InitTypeDef *MPU\_Init);}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MPU\_PRESENT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{309 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{310 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{311 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{312 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define IS\_NVIC\_PRIORITY\_GROUP(GROUP) (((GROUP) == NVIC\_PRIORITYGROUP\_0) || \(\backslash\)}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_1) || \(\backslash\)}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_2) || \(\backslash\)}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_3) || \(\backslash\)}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_4))}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define IS\_NVIC\_PREEMPTION\_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10)}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define IS\_NVIC\_SUB\_PRIORITY(PRIORITY)         ((PRIORITY) < 0x10)}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define IS\_NVIC\_DEVICE\_IRQ(IRQ)                ((IRQ) >= 0x00)}}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define IS\_SYSTICK\_CLK\_SOURCE(SOURCE) (((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK) || \(\backslash\)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{                                       ((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK\_DIV8))}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#if (\_\_MPU\_PRESENT == 1)}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define IS\_MPU\_REGION\_ENABLE(STATE) (((STATE) == MPU\_REGION\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{                                     ((STATE) == MPU\_REGION\_DISABLE))}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define IS\_MPU\_INSTRUCTION\_ACCESS(STATE) (((STATE) == MPU\_INSTRUCTION\_ACCESS\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{                                          ((STATE) == MPU\_INSTRUCTION\_ACCESS\_DISABLE))}}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define IS\_MPU\_ACCESS\_SHAREABLE(STATE)   (((STATE) == MPU\_ACCESS\_SHAREABLE) || \(\backslash\)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{                                          ((STATE) == MPU\_ACCESS\_NOT\_SHAREABLE))}}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define IS\_MPU\_ACCESS\_CACHEABLE(STATE)   (((STATE) == MPU\_ACCESS\_CACHEABLE) || \(\backslash\)}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{                                          ((STATE) == MPU\_ACCESS\_NOT\_CACHEABLE))}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#define IS\_MPU\_ACCESS\_BUFFERABLE(STATE)   (((STATE) == MPU\_ACCESS\_BUFFERABLE) || \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{                                          ((STATE) == MPU\_ACCESS\_NOT\_BUFFERABLE))}}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define IS\_MPU\_TEX\_LEVEL(TYPE) (((TYPE) == MPU\_TEX\_LEVEL0)  || \(\backslash\)}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{                                ((TYPE) == MPU\_TEX\_LEVEL1)  || \(\backslash\)}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{                                ((TYPE) == MPU\_TEX\_LEVEL2)  || \(\backslash\)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{                                ((TYPE) == MPU\_TEX\_LEVEL4))}}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define IS\_MPU\_REGION\_PERMISSION\_ATTRIBUTE(TYPE) (((TYPE) == MPU\_REGION\_NO\_ACCESS)   || \(\backslash\)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{                                                  ((TYPE) == MPU\_REGION\_PRIV\_RW)     || \(\backslash\)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{                                                  ((TYPE) == MPU\_REGION\_PRIV\_RW\_URO) || \(\backslash\)}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{                                                  ((TYPE) == MPU\_REGION\_FULL\_ACCESS) || \(\backslash\)}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{                                                  ((TYPE) == MPU\_REGION\_PRIV\_RO)     || \(\backslash\)}}
+\DoxyCodeLine{357 \textcolor{preprocessor}{                                                  ((TYPE) == MPU\_REGION\_PRIV\_RO\_URO))}}
+\DoxyCodeLine{358 }
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define IS\_MPU\_REGION\_NUMBER(NUMBER)    (((NUMBER) == MPU\_REGION\_NUMBER0) || \(\backslash\)}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER1) || \(\backslash\)}}
+\DoxyCodeLine{361 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER2) || \(\backslash\)}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER3) || \(\backslash\)}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER4) || \(\backslash\)}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER5) || \(\backslash\)}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER6) || \(\backslash\)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{                                         ((NUMBER) == MPU\_REGION\_NUMBER7))}}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define IS\_MPU\_REGION\_SIZE(SIZE)    (((SIZE) == MPU\_REGION\_SIZE\_32B)   || \(\backslash\)}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_64B)   || \(\backslash\)}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_128B)  || \(\backslash\)}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_256B)  || \(\backslash\)}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_512B)  || \(\backslash\)}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_1KB)   || \(\backslash\)}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_2KB)   || \(\backslash\)}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_4KB)   || \(\backslash\)}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_8KB)   || \(\backslash\)}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_16KB)  || \(\backslash\)}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_32KB)  || \(\backslash\)}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_64KB)  || \(\backslash\)}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_128KB) || \(\backslash\)}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_256KB) || \(\backslash\)}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_512KB) || \(\backslash\)}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_1MB)   || \(\backslash\)}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_2MB)   || \(\backslash\)}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_4MB)   || \(\backslash\)}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_8MB)   || \(\backslash\)}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_16MB)  || \(\backslash\)}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_32MB)  || \(\backslash\)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_64MB)  || \(\backslash\)}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_128MB) || \(\backslash\)}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_256MB) || \(\backslash\)}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_512MB) || \(\backslash\)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_1GB)   || \(\backslash\)}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_2GB)   || \(\backslash\)}}
+\DoxyCodeLine{395 \textcolor{preprocessor}{                                     ((SIZE) == MPU\_REGION\_SIZE\_4GB))}}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define IS\_MPU\_SUB\_REGION\_DISABLE(SUBREGION)  ((SUBREGION) < (uint16\_t)0x00FF)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MPU\_PRESENT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{404 \textcolor{comment}{/* Private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{414 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{415 \}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32L4xx\_HAL\_CORTEX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{419 }
+\DoxyCodeLine{420 }
+
+\end{DoxyCode}

@@ -40,7 +40,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
- UART_HandleTypeDef huart2;
+UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
@@ -56,7 +56,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+LCD1602_t LCD1602_Dev;
 /* USER CODE END 0 */
 
 /**
@@ -90,6 +90,24 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_Delay(100);
+  LCD1602_Pins_Set(&LCD1602_Dev, GPIOC, GPIO_PIN_1, GPIOC, GPIO_PIN_0);
+  LCD1602_4Pin_Set(&LCD1602_Dev,
+					GPIOC, GPIO_PIN_9,
+					GPIOC, GPIO_PIN_10,
+					GPIOC, GPIO_PIN_11,
+		  	  	  	GPIOD, GPIO_PIN_2);
+//  LCD1602_8Pin_Set(&LCD1602_Dev,
+//		  	  	  	GPIOB, GPIO_PIN_0,
+//					GPIOC, GPIO_PIN_3,
+//					GPIOC, GPIO_PIN_2,
+//					GPIOB, GPIO_PIN_7,
+//					GPIOC, GPIO_PIN_9,
+//					GPIOC, GPIO_PIN_10,
+//					GPIOC, GPIO_PIN_11,
+//		  	  	  	GPIOD, GPIO_PIN_2);
+  LCD1602_Init(&LCD1602_Dev);
+ int i = 0,j = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,6 +117,20 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  HAL_Delay(1000);
+	  LCD1602_Clear(&LCD1602_Dev);
+	  LCD1602_SetCursor(&LCD1602_Dev, j, i);
+	  LCD1602_Printf(&LCD1602_Dev, "%d",i++);
+	  if(i >= 16)
+	  {
+		  j+=1;
+		  i = 0;
+	  }
+	  if(j >= 2)
+	  {
+		  j = 0;
+	  }
+
   }
   /* USER CODE END 3 */
 }
@@ -203,7 +235,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -211,12 +249,26 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : PC0 PC1 PC2 PC3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
   /*Configure GPIO pin : LD2_Pin */
   GPIO_InitStruct.Pin = LD2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 
