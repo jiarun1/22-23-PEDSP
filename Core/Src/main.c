@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "arm_math.h"
+#include "Doppler_Radar.h"
+#include "LCD1602.h"
 
 /* USER CODE END Includes */
 
@@ -32,7 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define SPEED_CAL_PARAM	0.01
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -69,7 +71,7 @@ static void MX_TIM1_Init(void);
 /* USER CODE BEGIN 0 */
 
 DopplerADC_t DopplerADC;
-
+LCD1602_t LCD1602_Dev;
 /* USER CODE END 0 */
 
 /**
@@ -106,11 +108,22 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+  LCD1602_Pins_Set(&LCD1602_Dev, GPIOC, GPIO_PIN_1, GPIOC, GPIO_PIN_0);
+  LCD1602_4Pin_Set(&LCD1602_Dev,
+					GPIOC, GPIO_PIN_9,
+					GPIOC, GPIO_PIN_10,
+					GPIOC, GPIO_PIN_11,
+		  	  	  	GPIOD, GPIO_PIN_2);
+  LCD1602_Init(&LCD1602_Dev);
+//  LCD1602_Printf(&LCD1602_Dev, "Init");
+
+
   HAL_TIM_Base_Start_IT(&htim1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 5);
 
   Doppler_Radar_Init(&DopplerADC, &hadc1, &hdma_adc1, 5000);
+
 
   HAL_Delay(100);
   /* USER CODE END 2 */
@@ -122,8 +135,14 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	  HAL_Delay(100);
-//	  Doppler_Radar_FFT_Cal(&DopplerADC);
+	  LCD1602_Clear(&LCD1602_Dev);
+	  LCD1602_SetCursor(&LCD1602_Dev, 0, 0);
+	  LCD1602_Printf(&LCD1602_Dev, "Freq: %d", DopplerADC.max_frequency);
+	  LCD1602_SetCursor(&LCD1602_Dev, 1, 0);
+	  float32_t speed = DopplerADC.max_frequency * SPEED_CAL_PARAM;
+	  LCD1602_Printf(&LCD1602_Dev, "Speed: %.5f", speed);
+	  HAL_Delay(1000);
+
   }
   /* USER CODE END 3 */
 }
@@ -231,7 +250,7 @@ static void MX_ADC1_Init(void)
   sConfig.Channel = ADC_CHANNEL_12;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
-  sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  sConfig.SingleDiff = ADC_DIFFERENTIAL_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)

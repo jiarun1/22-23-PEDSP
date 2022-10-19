@@ -7,11 +7,11 @@
 #include "Doppler_Radar.h"
 #include "stdlib.h"
 
-void Doppler_Radar_Init(DopplerADC_t* Dev, ADC_HandleTypeDef* adc, DMA_HandleTypeDef* adc_dma, uint16_t period)
+void Doppler_Radar_Init(DopplerADC_t* Dev, ADC_HandleTypeDef* adc, DMA_HandleTypeDef* adc_dma, uint16_t Sample_Freq)
 {
 	Dev->Input.ADC = adc;
 	Dev->Input.ADC_DMA = adc_dma;
-	Dev->Input.Period = period;
+	Dev->Input.Sample_Freq = Sample_Freq;
 
 	HAL_ADC_Start_DMA(Dev->Input.ADC, Dev->ADC_Measure, SAMPLE_POINT);
 }
@@ -61,7 +61,7 @@ void Doppler_Radar_IQRHandler(DopplerADC_t* Dev)
 		if(Dev->fft_mag[i] > max_fft)
 		{
 			max_fft = Dev->fft_mag[i];
-			Dev->max_frequency = i * Dev->Input.Period;
+			Dev->max_frequency = i * Dev->Input.Sample_Freq / SAMPLE_POINT;
 		}
 	}
 

@@ -18,7 +18,8 @@ typedef struct {
 	struct{
 		ADC_HandleTypeDef* ADC;
 		DMA_HandleTypeDef* ADC_DMA;
-		uint16_t Period;
+		uint16_t Sample_Freq;
+		float32_t fundamental_freq;
 	}Input;
 
 	float32_t Average;
@@ -28,7 +29,7 @@ typedef struct {
 	uint32_t max_frequency;
 }DopplerADC_t;
 
-extern void Doppler_Radar_Init(DopplerADC_t* Dev, ADC_HandleTypeDef* adc, DMA_HandleTypeDef* adc_dma, uint16_t period);
+extern void Doppler_Radar_Init(DopplerADC_t* Dev, ADC_HandleTypeDef* adc, DMA_HandleTypeDef* adc_dma, uint16_t Sample_Freq);
 
 extern void Doppler_Radar_IQRHandler(DopplerADC_t* Dev);
 
