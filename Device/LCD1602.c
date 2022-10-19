@@ -289,7 +289,7 @@ extern LCD1602_ERROR_CODE_e LCD1602_Printf(LCD1602_t* Dev, const char *format,..
 
 	va_start(ap,format);
 
-	len = vsprintf(((char*) buffer), format, ap);
+	len = vsnprintf(((char*) buffer), (size_t)LCD1602_MAX_WRITTER_BUFFER_SIZE, format, ap);
 
 	va_end(ap);
 
@@ -301,7 +301,8 @@ extern LCD1602_ERROR_CODE_e LCD1602_Printf(LCD1602_t* Dev, const char *format,..
 	return LCD1602_OK;
 }
 
-/**
+
+/*
  * \brief     : This Function is used to set the cursor
  *
  * \copyright : Copyright Jiarun LIU
@@ -541,5 +542,4 @@ static LCD1602_ERROR_CODE_e LCD1602_Read_Byte(LCD1602_t* Dev, LCD1602_CMD_DATA_e
 
 	return LCD1602_OK;
 }
-
 
